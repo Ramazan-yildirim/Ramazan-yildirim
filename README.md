@@ -1,4 +1,8 @@
-<div style="color: red; text-align: center;">  Hİ 👋, I'M RAMAZAN YILDIRIM </div> 
+<div style="color: red; text-align: center;">
+  
+  Hİ 👋, I'M RAMAZAN YILDIRIM 
+  
+</div> 
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
