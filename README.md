@@ -1,7 +1,8 @@
 <div style="color: red; text-align: center;">
   
- # Hİ 👋, I'M RAMAZAN YILDIRIM 
-  
+  Paragraf cümlesi.
+
+  Bir başka paragraf cümlesi.
 </div> 
 
 - 🔭 I’m currently working on ...
