@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on *python*,
 
-- I know HTML, CSS and Bootstrap
+- 💻 I know HTML, CSS and Bootstrap
 
 - 🌱 I’m currently learning *JavaScript*
 
