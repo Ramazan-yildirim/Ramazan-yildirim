@@ -1,9 +1,4 @@
-<div style="color: red; text-align: center;">
-  
-  Paragraf cümlesi.
-
-  Bir başka paragraf cümlesi.
-</div> 
+# Hi I' m RAMAZAN YILDIRIM
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
