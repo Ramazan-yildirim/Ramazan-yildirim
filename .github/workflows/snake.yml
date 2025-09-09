@@ -2,6 +2,9 @@ name: Generate Snake with Custom Colors
 
 on:
   workflow_dispatch:
+    # Manuel çalıştırma
+  schedule:
+    - cron: "0 0 * * *"  # Her gün çalıştırmak istersen
 
 permissions:
   contents: write
@@ -13,19 +16,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Ensure dist folder exists
-        run: mkdir -p dist
-
       - name: Generate snake animation
-        uses: Platane/snk@v3
+        uses: nao-pon/gh-contributions-snake@v1
         with:
           github_user_name: Ramazan-yildirim
           outputs: dist/github-contribution-grid-snake.svg
-          color_bg: '#0d1117'
-          color_border: '#30363d'
-
-      - name: Customize snake colors
-        run: python3 .github/scripts/customize_snake_colors.py dist/github-contribution-grid-snake.svg
+          color_bg: '#0d1117'      # Boş kareler
+          color_border: '#30363d'  # Karelerin sınırları
+          colors: '#0d1117,#ff6f61,#ffb347,#ffd700,#00bfff'  # Dilediğin renkler
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3
