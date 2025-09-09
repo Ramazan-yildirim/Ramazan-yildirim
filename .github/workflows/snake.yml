@@ -1,8 +1,6 @@
 name: Generate Snake with Custom Colors
 
 on:
-  schedule:
-    - cron: "0 0 * * *"  # Her gün çalıştır
   workflow_dispatch:
 
 permissions:
@@ -15,6 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Ensure dist folder exists
+        run: mkdir -p dist
+
       - name: Generate snake animation
         uses: Platane/snk@v3
         with:
@@ -24,8 +25,7 @@ jobs:
           color_border: '#30363d'
 
       - name: Customize snake colors
-        run: |
-          python3 scripts/customize_snake_colors.py dist/github-contribution-grid-snake.svg
+        run: python3 .github/scripts/customize_snake_colors.py dist/github-contribution-grid-snake.svg
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3
