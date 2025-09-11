@@ -29,7 +29,7 @@
 
 ## 🛠️ Tools & Technologies I Use
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=py,tensorflow,selenium,cpp,cs,dotnet,fastapi,linux,ubuntu,docker,vscode,git,github,gitlab,html,css,js,bootstrap,laravel,vue,postman,powershell,md,stackoverflow" />
+  <img src="https://skillicons.dev/icons?i=py,tensorflow,selenium,cs,dotnet,linux,ubuntu,docker,vscode,git,github,html,css,js,bootstrap,laravel,vue,postman,php,powershell,md,stackoverflow" />
 </p>
 
 ---
