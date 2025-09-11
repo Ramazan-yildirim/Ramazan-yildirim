@@ -11,17 +11,19 @@
 ---
 
 ## 📱 Connect with Me
-<p style="text-align: center;">
-  <a href="https://www.instagram.com/ramazan.yiildirim/" target="blank">
+
+<div align="center" style="display: flex; justify-content: center; gap: 20px;">
+  <a href="https://www.instagram.com/ramazan.yiildirim/" target="_blank">
     <img src="https://skillicons.dev/icons?i=instagram" height="40"/>
   </a>
-  <a href="https://www.linkedin.com/in/ramazanyldr/" target="blank">
+  <a href="https://www.linkedin.com/in/ramazanyldr/" target="_blank">
     <img src="https://skillicons.dev/icons?i=linkedin" height="40"/>
   </a>
   <a href="mailto:ramazanyldr0103@gmail.com">
     <img src="https://skillicons.dev/icons?i=gmail" height="40"/>
   </a>
-</p>
+</div>
+
 
 ---
 
