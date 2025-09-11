@@ -28,7 +28,7 @@
 
     .name {
       fill: #00ff88;
-      font-size: 60px;
+      font-size: 65px;
       font-family: monospace;
       text-anchor: middle;
       dominant-baseline: middle;
