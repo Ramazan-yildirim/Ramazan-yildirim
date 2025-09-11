@@ -11,7 +11,7 @@
 ---
 
 ## 📱 Connect with Me
-<p align="left">
+<p style="text-align: center;">
   <a href="https://www.instagram.com/ramazan.yiildirim/" target="blank">
     <img src="https://skillicons.dev/icons?i=instagram" height="40"/>
   </a>
