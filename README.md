@@ -10,6 +10,8 @@
 
 📊 My WakaTime: [View My Coding Stats](https://wakatime.com/@ramazanyildirim)
 
+![Profile Views](https://komarev.com/ghpvc/?username=Ramazan-yildirim&color=blue)
+
 ---
 
 ## 📱 Connect with Me
@@ -64,10 +66,6 @@
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=Ramazan-yildirim&theme=radical&margin-w=10&margin-h=10" alt="trophies"/>
 </p>
-
----
-
-![Profile Views](https://komarev.com/ghpvc/?username=Ramazan-yildirim&color=blue)
 
 ---
 
