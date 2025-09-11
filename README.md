@@ -12,13 +12,13 @@
 
 ## 📱 Connect with Me
 <p align="left">
-  <a href="https://www.instagram.com/INSTAGRAM_KULLANICI_ADI" target="blank">
+  <a href="https://www.instagram.com/ramazan.yiildirim/" target="blank">
     <img src="https://skillicons.dev/icons?i=instagram" height="40"/>
   </a>
-  <a href="https://www.linkedin.com/in/LINKEDIN_KULLANICI_ADI" target="blank">
+  <a href="https://www.linkedin.com/in/ramazanyldr/" target="blank">
     <img src="https://skillicons.dev/icons?i=linkedin" height="40"/>
   </a>
-  <a href="mailto:MAIL_ADRESINIZ">
+  <a href="mailto:ramazanyldr0103@gmail.com">
     <img src="https://skillicons.dev/icons?i=gmail" height="40"/>
   </a>
 </p>
