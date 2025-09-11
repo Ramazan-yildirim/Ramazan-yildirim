@@ -1,1 +1,44 @@
+# GitHub Actions_snake
+# Bu dosya, GitHub katkı grafiğinizden bir yılan animasyonu oluşturur.
+# Her 12 saatte bir ve manuel olarak çalıştırılabilir şekilde ayarlanmıştır.
 
+name: Generate Snake Animation
+
+on:
+  schedule:
+    # Her 12 saatte bir çalışır (00:00 ve 12:00 UTC)
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate Snake Animation
+        id: snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          # BURAYA KENDİ GITHUB KULLANICI ADINIZI YAZIN
+          github_user_name: ${{ github.repository_owner }}
+          
+          # Oluşturulacak SVG dosyalarının listesi
+          # Koyu tema için "dark" olanı kullanacağız
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/ocean.svg?palette=ocean
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
