@@ -66,9 +66,4 @@
 ---
 
 ## 🐍 GitHub Snake Game
-<p align="center">
-  <img src="https://github.com/Ramazan-yildirim/Ramazan-yildirim/blob/output/github-contribution-grid-snake.svg" alt="snake animation"/>
-</p>
-
-
 ![github snake animation](https://raw.githubusercontent.com/Ramazan-yildirim/Ramazan-yildirim/output/github-contribution-grid-snake-dark.svg)
