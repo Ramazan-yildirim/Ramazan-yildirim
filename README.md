@@ -29,7 +29,7 @@
 
 ## 🛠️ Tools & Technologies I Use
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,cpp,cs,fastapi,ros,linux,docker,git,postgresql,qt,flutter,dart,opencv" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,cs,fastapi,linux,docker,git,postgresql,bootstrap" />
 </p>
 
 ---
