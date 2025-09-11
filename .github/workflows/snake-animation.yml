@@ -13,6 +13,13 @@ on:
     branches:
       - main
 
+# ====================================================================
+# HATAYI DÜZELTEN KISIM BURASI
+# Bu blok, aksiyonun deponuza yazma izni olmasını sağlar.
+permissions:
+  contents: write
+# ====================================================================
+
 jobs:
   build:
     runs-on: ubuntu-latest
