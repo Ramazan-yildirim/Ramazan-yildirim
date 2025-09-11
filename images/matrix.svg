@@ -145,9 +145,9 @@
     <text x="190" y="140" class="digit" style="--delay:0.6s; --duration:1.8s">0</text>
     <text x="220" y="140" class="digit" style="--delay:0.2s; --duration:2.1s">1</text>
     <text x="250" y="140" class="digit" style="--delay:0.5s; --duration:1.9s">0</text>
-    <text x="280" y="140" class="digit" style="--delay:0.4s; --duration:2.2s">1</text>
     
     <text x="405" y="140" class="name" style="text-anchor: end;">Ramazan</text>
+    <text x="405" y="140" class="digit" style="--delay:0.4s; --duration:2.2s">1</text>
     <text x="435" y="140" class="digit" style="--delay:0.4s; --duration:2.1s">1</text>
     <text x="465" y="140" class="digit" style="--delay:0.3s; --duration:2.0s">0</text>
     <text x="495" y="140" class="name" style="text-anchor: start;">Yıldırım</text>
