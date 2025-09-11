@@ -11,11 +11,4 @@
 
 - 📫 How to reach me *ramazanyldr0103@gmail.com*
 
-![github contribution grid snake animation](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg?user_name=Ramazan-yildirim)
-
-
-## 🐍 GitHub Snake Game
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Ramazan-yildirim/Ramazan-yildirim/output/github-contribution-grid-snake.svg" alt="snake animation"/>
-</p>
-
+![github snake animation](https://raw.githubusercontent.com/Ramazan-yildirim/Ramazan-yildirim/output/github-contribution-grid-snake-dark.svg)
