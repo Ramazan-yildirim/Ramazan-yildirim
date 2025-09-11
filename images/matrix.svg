@@ -1,1 +1,73 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .digit {
+      fill: #00ff88;
+      font-family: monospace;
+      font-size: 16px;
+      opacity: 0;
+      animation: fall 2s infinite;
+      filter: url(#glow);
+    }
+    .digit:nth-child(1) { animation-delay: 0s; }
+    .digit:nth-child(2) { animation-delay: 0.2s; }
+    .digit:nth-child(3) { animation-delay: 0.4s; }
+    .digit:nth-child(4) { animation-delay: 0.6s; }
+    .digit:nth-child(5) { animation-delay: 0.8s; }
+    .digit:nth-child(6) { animation-delay: 1s; }
+    .digit:nth-child(7) { animation-delay: 1.2s; }
+    .digit:nth-child(8) { animation-delay: 1.4s; }
+    .digit:nth-child(9) { animation-delay: 1.6s; }
+    .digit:nth-child(10) { animation-delay: 1.8s; }
+
+    @keyframes fall {
+      0% { transform: translateY(-20px); opacity: 0; }
+      20%, 80% { transform: translateY(0); opacity: 0.8; }
+      100% { transform: translateY(20px); opacity: 0; }
+    }
+
+    .name {
+      fill: #00ff88;
+      font-size: 24px;
+      font-family: monospace;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      filter: url(#glow);
+    }
+  </style>
+
+  <!-- Üst sıra digits -->
+  <text x="50" y="30" class="digit">0</text>
+  <text x="100" y="30" class="digit">1</text>
+  <text x="150" y="30" class="digit">0</text>
+  <text x="200" y="30" class="digit">1</text>
+  <text x="250" y="30" class="digit">0</text>
+
+  <!-- Alt sıra digits -->
+  <text x="50" y="170" class="digit">1</text>
+  <text x="100" y="170" class="digit">0</text>
+  <text x="150" y="170" class="digit">1</text>
+  <text x="200" y="170" class="digit">0</text>
+  <text x="250" y="170" class="digit">1</text>
+
+  <!-- Ortadaki digits -->
+  <text x="30" y="90" class="digit">0</text>
+  <text x="60" y="110" class="digit">1</text>
+  <text x="90" y="130" class="digit">0</text>
+  <text x="210" y="90" class="digit">1</text>
+  <text x="240" y="110" class="digit">0</text>
+  <text x="270" y="130" class="digit">1</text>
+
+  <!-- Ortadaki ad-soyad -->
+  <text x="150" y="100" class="name">Ramazan Yıldırım</text>
+</svg>
 
