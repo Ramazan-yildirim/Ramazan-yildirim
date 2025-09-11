@@ -46,21 +46,21 @@
 
 ### 🔹 View GitHub Streak
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=USERNAME&theme=radical" alt="streak"/>
+  <img src="https://streak-stats.demolab.com?user=Ramazan-yildirim&theme=radical" alt="streak"/>
 </p>
 
 ---
 
 ### 🔹 View Contribution Graph
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=USERNAME&theme=radical" alt="contribution graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Ramazan-yildirim&theme=radical" alt="contribution graph"/>
 </p>
 
 ---
 
 ### 🔹 View GitHub Trophies
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=USERNAME&theme=radical&margin-w=10&margin-h=10" alt="trophies"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=Ramazan-yildirim&theme=radical&margin-w=10&margin-h=10" alt="trophies"/>
 </p>
 
 ---
