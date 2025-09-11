@@ -67,5 +67,9 @@
 
 ---
 
+![Profile Views](https://komarev.com/ghpvc/?username=Ramazan-yildirim&color=blue)
+
+---
+
 ## 🐍 GitHub Snake Game
 ![github snake animation](https://raw.githubusercontent.com/Ramazan-yildirim/Ramazan-yildirim/output/github-contribution-grid-snake-dark.svg)
