@@ -38,8 +38,8 @@
 
 ### 🔹 View GitHub Stats and Top Languages
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=radical" alt="stats" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=USERNAME&layout=compact&theme=radical" alt="langs" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Ramazan-yildirim&show_icons=true&theme=radical" alt="GitHub Stats" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ramazan-yildirim&layout=compact&theme=radical" alt="Top Languages" height="165"/>
 </p>
 
 ---
