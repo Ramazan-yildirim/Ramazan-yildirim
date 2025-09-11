@@ -146,11 +146,11 @@
     <text x="220" y="140" class="digit" style="--delay:0.2s; --duration:2.1s">1</text>
     <text x="250" y="140" class="digit" style="--delay:0.5s; --duration:1.9s">0</text>
     
-    <text x="415" y="140" class="name" style="text-anchor: end;">Ramazan</text>
+    <text x="420" y="140" class="name" style="text-anchor: end;">Ramazan</text>
     <text x="405" y="140" class="digit" style="--delay:0.4s; --duration:2.2s">1</text>
     <text x="435" y="140" class="digit" style="--delay:0.4s; --duration:2.1s">1</text>
     <text x="465" y="140" class="digit" style="--delay:0.3s; --duration:2.0s">0</text>
-    <text x="480" y="140" class="name" style="text-anchor: start;">Yıldırım</text>
+    <text x="475" y="140" class="name" style="text-anchor: start;">Yıldırım</text>
 
     <text x="670" y="140" class="digit" style="--delay:0.5s; --duration:1.9s">1</text>
     <text x="700" y="140" class="digit" style="--delay:0.2s; --duration:2.2s">0</text>
