@@ -1,12 +1,12 @@
 <img src="images/matrix.svg" alt="Ramazan Yıldırım Matrix Banner" style="width:100%; height:auto; display:block;">
 
+---
+
 🎓 I'm a Computer Engineering student at Mehmet Akif Ersoy University, expected to graduate in 2027.  
-🧠 My main areas of interest are **Artificial Intelligence, Embedded Systems, and Robotics**.  
-🤖 I work on autonomous vehicle projects using **Raspberry Pi, Pixhawk, and sensor fusion techniques**.  
-📷 I develop computer vision systems using **YOLOv8, OpenCV, and AI cameras** for real-time object detection.  
-🛠️ I use **ROS 2 and Gazebo Harmonic** to simulate and test robotic systems in underwater environments.  
-💻 I enjoy working with **Python, C++, and FastAPI** to build scalable backend systems.  
-🔍 I’m always learning new technologies and contributing to open-source projects.  
+🧠 I’m learning about Artificial Intelligence and exploring its applications.  
+💻 I am learning to develop web applications using Laravel, PHP, and modern frontend technologies.  
+🛠️ I am practicing building backend systems and APIs with Python, C++, and FastAPI.  
+🔍 I enjoy discovering new technologies and contributing to open-source projects.
 
 ---
 
