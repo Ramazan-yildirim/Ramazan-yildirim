@@ -4,7 +4,7 @@
 
 🎓 I'm a Computer Engineering student at Mehmet Akif Ersoy University, expected to graduate in 2027.  
 🧠 I’m learning about Artificial Intelligence and exploring its applications.  
-💻 I am learning to develop web applications using Laravel, PHP, and modern frontend technologies.  
+💻 I am learning to develop web applications using Laravel, PHP, Vue.js, and modern frontend technologies.  
 🛠️ I am practicing building backend systems and APIs with Python, C++, and FastAPI.  
 🔍 I enjoy discovering new technologies and contributing to open-source projects.
 
@@ -29,7 +29,7 @@
 
 ## 🛠️ Tools & Technologies I Use
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,cpp,cs,fastapi,linux,docker,git,postgresql,bootstrap" />
+  <img src="https://skillicons.dev/icons?i=py,tensorflow,selenium,cpp,cs,dotnet,fastapi,linux,ubuntu,docker,vscode,git,github,gitlab,html,css,js,bootstrap,laravel,vue,postman,powershell,md,stackoverflow" />
 </p>
 
 ---
