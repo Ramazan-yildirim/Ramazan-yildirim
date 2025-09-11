@@ -1,4 +1,3 @@
-<img src="images/matrix.svg" width="300" height="200">
 
 <h1 align="center">Hi 👋, I'm Ramazan Yıldırım</h1>
 <h3 align="center">A passionate frontend , python developer from Turkey</h3>
