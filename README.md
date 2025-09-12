@@ -33,7 +33,7 @@
 
 ## 🛠️ Tools & Technologies I Use
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,tensorflow,selenium,cs,dotnet,linux,ubuntu,docker,vscode,git,github,html,css,js,bootstrap,laravel,vue,postman,php,powershell,md,stackoverflow" />
+  <img src="https://skillicons.dev/icons?i=py,tensorflow,cs,dotnet,linux,ubuntu,docker,vscode,git,github,html,css,js,bootstrap,laravel,vue,postman,php,powershell,md,stackoverflow" />
 </p>
 
 ---
