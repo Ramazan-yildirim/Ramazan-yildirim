@@ -46,30 +46,24 @@
 
 ---
 
-### 🔹 GitHub Stats & Top Languages
+### 🔹 GitHub Stats & Top Languages (Private Dahil)
 <p align="center">
-  <a href="https://github.com/Ramazan-yildirim">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Ramazan-yildirim&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="GitHub Stats" height="165"/>
-  </a>
-  <a href="https://github.com/Ramazan-yildirim">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Ramazan-yildirim&layout=compact&theme=radical&langs_count=8" alt="Top Languages" height="165"/>
-  </a>
+  <img src="images/github-stats.svg" alt="GitHub Stats"/>
+  <img src="images/top-languages.svg" alt="Top Languages"/>
 </p>
 
 ---
 
-### 🔹 GitHub Streak
+### 🔹 GitHub Streak (Private Dahil)
 <p align="center">
-  <a href="https://github.com/Ramazan-yildirim">
-    <img src="https://github-readme-streak-stats-eight.vercel.app/?user=Ramazan-yildirim&theme=radical" alt="streak"/>
-  </a>
+  <img src="images/streak-stats.svg" alt="streak"/>
 </p>
 
 ---
 
-### 🔹 Contribution Graph
+### 🔹 Contribution Graph (Private Dahil)
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Ramazan-yildirim&theme=rogue" alt="contribution graph"/>
+  <img src="images/contribution-graph.svg" alt="contribution graph"/>
 </p>
 
 ---
@@ -83,5 +77,11 @@
 
 ---
 
-## 🐍 GitHub Snake Game
-![github snake animation](https://raw.githubusercontent.com/Ramazan-yildirim/Ramazan-yildirim/output/github-contribution-grid-snake-dark.svg)
+## 🐍 GitHub Snake Game (Private Dahil)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="images/github-snake.svg" />
+    <img alt="github snake animation" src="images/github-snake.svg" />
+  </picture>
+</p>

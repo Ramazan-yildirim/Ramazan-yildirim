@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "0 */12 * * *" # Her 12 saatte bir çalışır
   workflow_dispatch: # Manuel tetikleme
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -15,13 +18,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate GitHub Stats Card
-        uses: Platane/snk@v3
-        id: stats
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          
-      - name: Generate Stats SVG
+      # GitHub Metrics - Genel İstatistikler
+      - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -30,7 +28,73 @@ jobs:
           base: header, activity, community, repositories
           config_timezone: Europe/Istanbul
           filename: images/github-metrics.svg
-          
+
+      # GitHub Stats Card
+      - name: Generate GitHub Stats Card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Ramazan-yildirim
+          template: classic
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          config_timezone: Europe/Istanbul
+          filename: images/github-stats.svg
+
+      # Top Languages
+      - name: Generate Top Languages
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Ramazan-yildirim
+          template: classic
+          base: ""
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_colors: github
+          plugin_languages_limit: 8
+          plugin_languages_details: percentage
+          config_timezone: Europe/Istanbul
+          filename: images/top-languages.svg
+
+      # Contribution Graph
+      - name: Generate Contribution Graph
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Ramazan-yildirim
+          template: classic
+          base: ""
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
+          config_timezone: Europe/Istanbul
+          filename: images/contribution-graph.svg
+
+      # GitHub Streak Stats
+      - name: Generate Streak Stats
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Ramazan-yildirim
+          template: classic
+          base: ""
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_charts: yes
+          config_timezone: Europe/Istanbul
+          filename: images/streak-stats.svg
+
+      # GitHub Snake Animation
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Ramazan-yildirim
+          outputs: |
+            images/github-snake.svg
+            images/github-snake-dark.svg?palette=github-dark
+
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
