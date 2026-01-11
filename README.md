@@ -65,14 +65,6 @@
   </a>
 </p>
 
----
-
-### 🔹 Contribution Graph (Private Dahil)
-<p align="center">
-  <img src="images/contribution-graph.svg" alt="contribution graph"/>
-</p>
-
----
 
 ### 🔹 GitHub Trophies
 <p align="center">
