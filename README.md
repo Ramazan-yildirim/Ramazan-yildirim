@@ -75,11 +75,7 @@
 
 ---
 
-## 🐍 GitHub Snake Game (Private Dahil)
+## 🐍 GitHub Snake Game
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="images/github-snake.svg" />
-    <img alt="github snake animation" src="images/github-snake.svg" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg" alt="snake animation"/>
 </p>
