@@ -39,6 +39,13 @@
 
 ## 📊 GitHub Profile Stats
 
+### 🔹 GitHub Metrics (Private Dahil)
+<p align="center">
+  <img src="images/github-metrics.svg" alt="GitHub Metrics"/>
+</p>
+
+---
+
 ### 🔹 GitHub Stats & Top Languages
 <p align="center">
   <a href="https://github.com/Ramazan-yildirim">
