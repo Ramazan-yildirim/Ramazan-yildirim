@@ -70,7 +70,7 @@
 ### 🔹 GitHub Trophies
 <p align="center">
   <a href="https://github.com/Ramazan-yildirim">
-    <img src="https://github-profile-trophy.vercel.app/?username=Ramazan-yildirim&theme=radical&row=1&column=7&margin-w=10&margin-h=10&no-frame=true" alt="trophies"/>
+    <img src="https://github-trophies.vercel.app/?username=Ramazan-yildirim&theme=radical&row=1&column=7&margin-w=10&margin-h=10" alt="trophies"/>
   </a>
 </p>
 
