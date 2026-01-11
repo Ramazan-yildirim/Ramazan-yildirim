@@ -46,17 +46,23 @@
 
 ---
 
-### 🔹 GitHub Stats & Top Languages (Private Dahil)
+### 🔹 GitHub Stats & Top Languages
 <p align="center">
-  <img src="images/github-stats.svg" alt="GitHub Stats"/>
-  <img src="images/top-languages.svg" alt="Top Languages"/>
+  <a href="https://github.com/Ramazan-yildirim">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Ramazan-yildirim&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="GitHub Stats" height="165"/>
+  </a>
+  <a href="https://github.com/Ramazan-yildirim">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Ramazan-yildirim&layout=compact&theme=radical&langs_count=8" alt="Top Languages" height="165"/>
+  </a>
 </p>
 
 ---
 
-### 🔹 GitHub Streak (Private Dahil)
+### 🔹 GitHub Streak
 <p align="center">
-  <img src="images/streak-stats.svg" alt="streak"/>
+  <a href="https://github.com/Ramazan-yildirim">
+    <img src="https://github-readme-streak-stats-eight.vercel.app/?user=Ramazan-yildirim&theme=radical" alt="streak"/>
+  </a>
 </p>
 
 ---
