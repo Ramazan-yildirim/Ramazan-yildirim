@@ -41,29 +41,37 @@
 
 ### 🔹 GitHub Stats & Top Languages
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Ramazan-yildirim&show_icons=true&theme=radical&count_private=true&include_all_commits=true&cache_seconds=86400" alt="GitHub Stats" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ramazan-yildirim&layout=compact&theme=radical&count_private=true&cache_seconds=86400" alt="Top Languages" height="165"/>
+  <a href="https://github.com/Ramazan-yildirim">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Ramazan-yildirim&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="GitHub Stats" height="165"/>
+  </a>
+  <a href="https://github.com/Ramazan-yildirim">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Ramazan-yildirim&layout=compact&theme=radical&langs_count=8" alt="Top Languages" height="165"/>
+  </a>
 </p>
 
 ---
 
 ### 🔹 GitHub Streak
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Ramazan-yildirim&theme=radical" alt="streak"/>
+  <a href="https://github.com/Ramazan-yildirim">
+    <img src="https://github-readme-streak-stats-eight.vercel.app/?user=Ramazan-yildirim&theme=radical" alt="streak"/>
+  </a>
 </p>
 
 ---
 
 ### 🔹 Contribution Graph
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Ramazan-yildirim&theme=radical" alt="contribution graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Ramazan-yildirim&theme=rogue" alt="contribution graph"/>
 </p>
 
 ---
 
 ### 🔹 GitHub Trophies
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Ramazan-yildirim&theme=radical&margin-w=10&margin-h=10&no-frame=true" alt="trophies"/>
+  <a href="https://github.com/Ramazan-yildirim">
+    <img src="https://github-profile-trophy.vercel.app/?username=Ramazan-yildirim&theme=radical&row=1&column=7&margin-w=10&margin-h=10&no-frame=true" alt="trophies"/>
+  </a>
 </p>
 
 ---
