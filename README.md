@@ -7,6 +7,7 @@
 💻 I am learning to develop web applications using Laravel, PHP, Vue.js, and modern frontend technologies.  
 🛠️ I am practicing building backend systems and APIs with Python, C++, and FastAPI.  
 🔍 I enjoy discovering new technologies and contributing to open-source projects.
+
 📄 **My CV**: [View Detailed CV](https://github.com/Ramazan-yildirim/CV)
 
 📊 My WakaTime: [View My Coding Stats](https://wakatime.com/@ramazanyildirim)
