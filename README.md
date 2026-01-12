@@ -7,6 +7,7 @@
 💻 I am learning to develop web applications using Laravel, PHP, Vue.js, and modern frontend technologies.  
 🛠️ I am practicing building backend systems and APIs with Python, C++, and FastAPI.  
 🔍 I enjoy discovering new technologies and contributing to open-source projects.
+📄 **My CV**: [View Detailed CV](https://github.com/Ramazan-yildirim/CV)
 
 📊 My WakaTime: [View My Coding Stats](https://wakatime.com/@ramazanyildirim)
 
@@ -16,7 +17,7 @@
 
 ## 📱 Connect with Me
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px;">
+<div align="center" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
   <a href="https://www.instagram.com/ramazan.yiildirim/" target="_blank">
     <img src="https://skillicons.dev/icons?i=instagram" height="40"/>
   </a>
@@ -25,6 +26,9 @@
   </a>
   <a href="mailto:ramazanyldr0103@gmail.com">
     <img src="https://skillicons.dev/icons?i=gmail" height="40"/>
+  </a>
+  <a href="https://github.com/Ramazan-yildirim/CV" target="_blank">
+    <img src="https://img.shields.io/badge/CV-Review_My_CV-34495E?style=for-the-badge&logo=github&logoColor=white" height="40"/>
   </a>
 </div>
 
