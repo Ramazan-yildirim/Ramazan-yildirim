@@ -86,18 +86,9 @@ jobs:
           config_timezone: Europe/Istanbul
           filename: images/streak-stats.svg
 
-      # GitHub Snake Animation
-      - name: Generate Snake Animation
-        uses: Platane/snk@v3
-        with:
-          github_user_name: Ramazan-yildirim
-          outputs: |
-            images/github-snake.svg
-            images/github-snake-dark.svg?palette=github-dark
-
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 GitHub istatistikleri güncellendi" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 GitHub istatistikleri güncellendi" && git pull --rebase && git push)
