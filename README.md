@@ -8,7 +8,7 @@
 🛠️ I am practicing building backend systems and APIs with Python, C++, and FastAPI.  
 🔍 I enjoy discovering new technologies and contributing to open-source projects.
 
-📄 **My CV**: [View Detailed CV](https://github.com/Ramazan-yildirim/CV)
+📄 **My CV**: [View Detailed CV](https://github.com/Ramazan-yildirim/CV_Portfolio)
 
 📊 My WakaTime: [View My Coding Stats](https://wakatime.com/@ramazanyildirim)
 
@@ -28,7 +28,7 @@
   <a href="mailto:ramazanyldr0103@gmail.com">
     <img src="https://skillicons.dev/icons?i=gmail" height="40"/>
   </a>
-  <a href="https://github.com/Ramazan-yildirim/CV" target="_blank">
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio" target="_blank">
     <img src="https://img.shields.io/badge/CV-Review_My_CV-34495E?style=for-the-badge&logo=github&logoColor=white" height="40"/>
   </a>
 </div>
