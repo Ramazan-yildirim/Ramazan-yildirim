@@ -2,12 +2,12 @@
 
 ---
 
-👨‍💻 About Me
+## 👨‍💻 About Me
 
-🎓 Computer Engineering student at Burdur Mehmet Akif Ersoy University, expected to graduate in 2027.
-🤖 Focused on deep learning, computer vision, and Turkish natural language processing.
-🧠 Building practical AI projects with PyTorch, Hugging Face Transformers, OpenCV, and MediaPipe.
-🌐 Developing backend and web applications with FastAPI, Laravel, PHP, and Vue.js.
+🎓 Computer Engineering student at Burdur Mehmet Akif Ersoy University, expected to graduate in 2027.<br>
+🤖 Focused on deep learning, computer vision, and Turkish natural language processing.<br>
+🧠 Building practical AI projects with PyTorch, Hugging Face Transformers, OpenCV, and MediaPipe.<br>
+🌐 Developing backend and web applications with FastAPI, Laravel, PHP, and Vue.js.<br>
 🚀 Interested in reproducible machine learning, real-world AI applications, and open-source development.
 
 📄 **My CV**: [View Detailed CV](https://github.com/Ramazan-yildirim/CV_Portfolio)
