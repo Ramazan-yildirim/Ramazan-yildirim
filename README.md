@@ -26,9 +26,7 @@
 
 <a id="cv-and-portfolio"></a>
 <details>
-<summary>
-  <img src="assets/ui/cv-portfolio-panel.svg" alt="View CV &amp; Portfolio" height="44">
-</summary>
+<summary><strong>CV &amp; Portfolio</strong></summary>
 
 <br>
 
