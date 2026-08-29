@@ -2,66 +2,82 @@
 
 <img src="images/matrix.svg" alt="Ramazan Yıldırım Matrix Banner" style="width:100%; height:auto; display:block;">
 
----
-
-<div align="center">
-  <h1>Ramazan Yıldırım</h1>
-  <p><strong>Computer Engineering</strong> · Software Development · Artificial Intelligence</p>
-</div>
-
 <p align="center">
-  <a href="#cv"><img src="assets/ui/cv.svg" alt="View CV" height="40"></a>
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/portfolio.svg" alt="View Portfolio" height="40"></a>
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="View CV Repository" height="40"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/cv.svg" alt="Open CV" height="46"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/portfolio.svg" alt="View Portfolio" height="46"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="View CV Repository" height="46"></a>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/ramazanyldr/"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="40"></a>
-  <a href="mailto:ramazanyldr0103@gmail.com"><img src="assets/ui/email.svg" alt="Email" height="40"></a>
+  <a href="https://www.linkedin.com/in/ramazanyldr/"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="46"></a>
+  <a href="mailto:ramazanyldr0103@gmail.com"><img src="assets/ui/email.svg" alt="Email" height="46"></a>
   <!-- TODO: Add the personal website URL when it is available. -->
-  <img src="assets/ui/website.svg" alt="Personal website — link pending" height="40">
+  <img src="assets/ui/website.svg" alt="Personal website — link pending" height="46">
 </p>
 
 ---
 
 <a id="cv"></a>
-## CV
-
 <details>
 <summary><strong>View My CV</strong></summary>
 
 <br>
 
-A CV preview and downloadable PDF are not stored in this repository yet.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/cv_en_preview.png" alt="Ramazan Yıldırım English CV preview" width="760">
+</p>
 
-- [View CV Repository](https://github.com/Ramazan-yildirim/CV_Portfolio)
-- **TODO:** Add a CV preview image and downloadable PDF under `assets/cv/`.
+<p align="center">
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/download-cv-en.svg" alt="Open English CV PDF" height="44"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="44"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="Open CV Repository" height="44"></a>
+</p>
 
 </details>
 
-## Portfolio
+<br>
 
-[View Portfolio](https://github.com/Ramazan-yildirim/CV_Portfolio)
+<a id="portfolio"></a>
+<details>
+<summary><strong>View My Portfolio</strong></summary>
 
-<!-- TODO: Add a direct portfolio PDF download link when the file is available. -->
+<br>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-1.png" alt="Ramazan Yıldırım portfolio cover" width="760">
+  <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-2.png" alt="Ramazan Yıldırım portfolio page 2" width="760">
+  <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-3.png" alt="Ramazan Yıldırım portfolio page 3" width="760">
+  <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-4.png" alt="Ramazan Yıldırım portfolio page 4" width="760">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/download-portfolio.svg" alt="Open Portfolio PDF" height="44"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="Open CV and Portfolio Repository" height="44"></a>
+</p>
+
+</details>
 
 ---
 
-## Building
-
 <p align="center">
   <a href="https://dijitaldisdunyasi.com">
-    <img src="assets/dijital-dis-dunyasi/logo.svg" alt="Dijital Diş Dünyası" width="520">
+    <img src="assets/dijital-dis-dunyasi/logo.svg" alt="Dijital Diş Dünyası" width="560">
   </a>
 </p>
 
-### Dijital Diş Dünyası
+<p align="center">
+  <strong>An integrated digital platform for the dental ecosystem.</strong><br>
+  <sub>Connecting clinics, laboratories, suppliers, patients, and professionals across procurement, operations, communication, and AI-assisted workflows.</sub>
+</p>
 
-An integrated platform that brings dental clinics, laboratories, suppliers, patients, and industry professionals together across procurement, operations, communication, and AI-assisted workflows.
+<p align="center">
+  <code>Vue.js</code>&nbsp;&nbsp;·&nbsp;&nbsp;<code>JavaScript</code>&nbsp;&nbsp;·&nbsp;&nbsp;<code>CSS</code>&nbsp;&nbsp;·&nbsp;&nbsp;<code>SPA</code>
+</p>
 
-**Public frontend:** Vue.js · JavaScript · CSS<br>
-**Live:** [dijitaldisdunyasi.com](https://dijitaldisdunyasi.com)<br>
-<sub>Source repository is private.</sub>
+<p align="center">
+  <a href="https://dijitaldisdunyasi.com"><img src="assets/ui/visit-platform.svg" alt="Visit Dijital Diş Dünyası" height="44"></a>
+  <img src="assets/ui/private-source.svg" alt="Source repository is private" height="44">
+</p>
 
 ---
 
@@ -79,9 +95,36 @@ An integrated platform that brings dental clinics, laboratories, suppliers, pati
 
 ## 🛠️ Tech Stack
 
-`Python` · `PyTorch` · `TensorFlow` · `Hugging Face` · `OpenCV` · `MediaPipe` · `C#` · `.NET`<br>
-`FastAPI` · `Laravel` · `PHP` · `Vue.js` · `JavaScript` · `HTML` · `CSS`<br>
-`Docker` · `Linux` · `Git` · `GitHub` · `PowerShell`
+<table align="center">
+  <tr>
+    <td align="center" width="96"><img src="assets/tech/python.svg" alt="Python" width="42" height="42"><br><sub>Python</sub></td>
+    <td align="center" width="96"><img src="assets/tech/pytorch.svg" alt="PyTorch" width="42" height="42"><br><sub>PyTorch</sub></td>
+    <td align="center" width="96"><img src="assets/tech/tensorflow.svg" alt="TensorFlow" width="42" height="42"><br><sub>TensorFlow</sub></td>
+    <td align="center" width="96"><img src="assets/tech/huggingface.svg" alt="Hugging Face" width="42" height="42"><br><sub>Hugging Face</sub></td>
+    <td align="center" width="96"><img src="assets/tech/opencv.svg" alt="OpenCV" width="42" height="42"><br><sub>OpenCV</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/tech/mediapipe.svg" alt="MediaPipe" width="42" height="42"><br><sub>MediaPipe</sub></td>
+    <td align="center"><img src="assets/tech/csharp.svg" alt="C Sharp" width="42" height="42"><br><sub>C#</sub></td>
+    <td align="center"><img src="assets/tech/dotnet.svg" alt=".NET" width="42" height="42"><br><sub>.NET</sub></td>
+    <td align="center"><img src="assets/tech/fastapi.svg" alt="FastAPI" width="42" height="42"><br><sub>FastAPI</sub></td>
+    <td align="center"><img src="assets/tech/laravel.svg" alt="Laravel" width="42" height="42"><br><sub>Laravel</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/tech/php.svg" alt="PHP" width="42" height="42"><br><sub>PHP</sub></td>
+    <td align="center"><img src="assets/tech/vuejs.svg" alt="Vue.js" width="42" height="42"><br><sub>Vue.js</sub></td>
+    <td align="center"><img src="assets/tech/javascript.svg" alt="JavaScript" width="42" height="42"><br><sub>JavaScript</sub></td>
+    <td align="center"><img src="assets/tech/html5.svg" alt="HTML5" width="42" height="42"><br><sub>HTML5</sub></td>
+    <td align="center"><img src="assets/tech/css3.svg" alt="CSS3" width="42" height="42"><br><sub>CSS3</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/tech/docker.svg" alt="Docker" width="42" height="42"><br><sub>Docker</sub></td>
+    <td align="center"><img src="assets/tech/linux.svg" alt="Linux" width="42" height="42"><br><sub>Linux</sub></td>
+    <td align="center"><img src="assets/tech/git.svg" alt="Git" width="42" height="42"><br><sub>Git</sub></td>
+    <td align="center"><img src="assets/tech/powershell.svg" alt="PowerShell" width="42" height="42"><br><sub>PowerShell</sub></td>
+    <td align="center"><img src="assets/tech/github.svg" alt="GitHub" width="42" height="42"><br><sub>GitHub</sub></td>
+  </tr>
+</table>
 
 ---
 

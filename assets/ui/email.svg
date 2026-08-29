@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="132" height="40" viewBox="0 0 132 40" role="img" aria-labelledby="title">
-  <title id="title">Email</title><rect x=".5" y=".5" width="131" height="39" rx="8" fill="#0d1117" stroke="#30363d"/><path d="M1 8.5A8 8 0 0 1 8.5 1H11v38H8.5A8 8 0 0 1 1 31.5z" fill="#58a6ff"/>
-  <rect x="26" y="14" width="19" height="13" rx="2" fill="none" stroke="#8b949e" stroke-width="1.5"/><path d="m27 15 8.5 7L44 15" fill="none" stroke="#58a6ff" stroke-width="1.5" stroke-linejoin="round"/><text x="54" y="25" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="600">Email</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="46" viewBox="0 0 150 46" role="img" aria-labelledby="title">
+  <title id="title">Send Email</title>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#161b22"/><stop offset="1" stop-color="#0d1117"/></linearGradient><linearGradient id="accent" x1="0" x2="0" y2="1"><stop stop-color="#79c0ff"/><stop offset="1" stop-color="#1f6feb"/></linearGradient></defs>
+  <rect x=".5" y=".5" width="149" height="45" rx="10" fill="url(#bg)" stroke="#30363d"/><path d="M1 10.5A9.5 9.5 0 0 1 10.5 1H13v44h-2.5A9.5 9.5 0 0 1 1 35.5z" fill="url(#accent)"/>
+  <circle cx="35" cy="23" r="12" fill="#58a6ff" fill-opacity=".11" stroke="#58a6ff" stroke-opacity=".35"/><rect x="27.5" y="18" width="15" height="10" rx="1.5" fill="none" stroke="#79c0ff" stroke-width="1.4"/><path d="m28.5 19 6.5 5 6.5-5" fill="none" stroke="#79c0ff" stroke-width="1.4" stroke-linejoin="round"/>
+  <text x="55" y="19" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" font-weight="600" letter-spacing="1">CONTACT</text><text x="55" y="33" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13.5" font-weight="650">Email</text><path d="m130 19 4 4-4 4M125 23h9" fill="none" stroke="#79c0ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

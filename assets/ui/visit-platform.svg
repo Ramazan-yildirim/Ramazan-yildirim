@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="190" height="44" viewBox="0 0 190 44" role="img" aria-labelledby="title">
+  <title id="title">Visit Dijital Diş Dünyası</title>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d6093"/><stop offset="1" stop-color="#0382f2"/></linearGradient></defs>
+  <rect x=".5" y=".5" width="189" height="43" rx="10" fill="url(#bg)" stroke="#58a6ff" stroke-opacity=".45"/><circle cx="25" cy="22" r="10" fill="#fff" fill-opacity=".12"/><circle cx="25" cy="22" r="6" fill="none" stroke="#fff" stroke-width="1.2"/><path d="M19 22h12M25 16c3 3.5 3 8.5 0 12M25 16c-3 3.5-3 8.5 0 12" fill="none" stroke="#fff" stroke-width="1"/>
+  <text x="44" y="18" fill="#dbeafe" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" font-weight="600" letter-spacing="1">LIVE PLATFORM</text><text x="44" y="32" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13.5" font-weight="650">Visit Website</text><path d="m169 18 4 4-4 4M164 22h9" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
