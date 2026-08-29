@@ -26,7 +26,9 @@
 
 <a id="cv-and-portfolio"></a>
 <details>
-<summary><strong>View CV &amp; Portfolio</strong></summary>
+<summary>
+  <img src="assets/ui/cv-portfolio-panel.svg" alt="View CV &amp; Portfolio" height="44">
+</summary>
 
 <br>
 
@@ -135,5 +137,5 @@
 ## Languages
 
 <p align="center">
-  <img src="images/top-languages.svg" alt="Most used languages" width="480">
+  <img src="images/top-languages.svg" alt="Most used languages" width="680">
 </p>
