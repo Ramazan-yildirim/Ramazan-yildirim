@@ -4,6 +4,67 @@
 
 ---
 
+<div align="center">
+  <h1>Ramazan Yıldırım</h1>
+  <p><strong>Computer Engineering</strong> · Software Development · Artificial Intelligence</p>
+</div>
+
+<p align="center">
+  <a href="#cv"><img src="assets/ui/cv.svg" alt="View CV" height="40"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/portfolio.svg" alt="View Portfolio" height="40"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="View CV Repository" height="40"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/ramazanyldr/"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="40"></a>
+  <a href="mailto:ramazanyldr0103@gmail.com"><img src="assets/ui/email.svg" alt="Email" height="40"></a>
+  <!-- TODO: Add the personal website URL when it is available. -->
+  <img src="assets/ui/website.svg" alt="Personal website — link pending" height="40">
+</p>
+
+---
+
+<a id="cv"></a>
+## CV
+
+<details>
+<summary><strong>View My CV</strong></summary>
+
+<br>
+
+A CV preview and downloadable PDF are not stored in this repository yet.
+
+- [View CV Repository](https://github.com/Ramazan-yildirim/CV_Portfolio)
+- **TODO:** Add a CV preview image and downloadable PDF under `assets/cv/`.
+
+</details>
+
+## Portfolio
+
+[View Portfolio](https://github.com/Ramazan-yildirim/CV_Portfolio)
+
+<!-- TODO: Add a direct portfolio PDF download link when the file is available. -->
+
+---
+
+## Building
+
+<p align="center">
+  <a href="https://dijitaldisdunyasi.com">
+    <img src="assets/dijital-dis-dunyasi/logo.svg" alt="Dijital Diş Dünyası" width="520">
+  </a>
+</p>
+
+### Dijital Diş Dünyası
+
+An integrated platform that brings dental clinics, laboratories, suppliers, patients, and industry professionals together across procurement, operations, communication, and AI-assisted workflows.
+
+**Public frontend:** Vue.js · JavaScript · CSS<br>
+**Live:** [dijitaldisdunyasi.com](https://dijitaldisdunyasi.com)<br>
+<sub>Source repository is private.</sub>
+
+---
+
 ## 👨‍💻 About Me
 
 🎓 Computer Engineering student at Burdur Mehmet Akif Ersoy University, expected to graduate in 2027.<br>
@@ -12,79 +73,38 @@
 🌐 Developing backend and web applications with FastAPI, Laravel, PHP, and Vue.js.<br>
 🚀 Interested in reproducible machine learning, real-world AI applications, and open-source development.
 
-📄 **My CV**: [View Detailed CV](https://github.com/Ramazan-yildirim/CV_Portfolio)
-
-📊 My WakaTime: [View My Coding Stats](https://wakatime.com/@ramazanyildirim)
-
-![Profile Views](https://komarev.com/ghpvc/?username=Ramazan-yildirim&color=blue)
+[Instagram](https://www.instagram.com/ramazan.yiildirim/) · [WakaTime](https://wakatime.com/@ramazanyildirim)
 
 ---
 
-## 📱 Connect with Me
+## 🛠️ Tech Stack
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-  <a href="https://www.instagram.com/ramazan.yiildirim/" target="_blank">
-    <img src="https://skillicons.dev/icons?i=instagram" height="40"/>
-  </a>
-  <a href="https://www.linkedin.com/in/ramazanyldr/" target="_blank">
-    <img src="https://skillicons.dev/icons?i=linkedin" height="40"/>
-  </a>
-  <a href="mailto:ramazanyldr0103@gmail.com">
-    <img src="https://skillicons.dev/icons?i=gmail" height="40"/>
-  </a>
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio" target="_blank">
-    <img src="https://img.shields.io/badge/CV-Review_My_CV-34495E?style=for-the-badge&logo=github&logoColor=white" height="40"/>
-  </a>
-</div>
+`Python` · `PyTorch` · `TensorFlow` · `Hugging Face` · `OpenCV` · `MediaPipe` · `C#` · `.NET`<br>
+`FastAPI` · `Laravel` · `PHP` · `Vue.js` · `JavaScript` · `HTML` · `CSS`<br>
+`Docker` · `Linux` · `Git` · `GitHub` · `PowerShell`
 
 ---
 
-## 🛠️ Tools & Technologies I Use
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=py,tensorflow,cs,dotnet,linux,ubuntu,docker,vscode,git,github,html,css,js,bootstrap,laravel,vue,postman,php,powershell,md,stackoverflow" />
-</p>
+## 📊 GitHub Overview
 
----
-
-## 📊 GitHub Profile Stats
-
-### 🔹 GitHub Metrics (Private Dahil)
-<p align="center">
-  <img src="images/github-metrics.svg" alt="GitHub Metrics"/>
-</p>
-
----
-
-### 🔹 GitHub Stats & Top Languages
 <p align="center">
   <a href="https://github.com/Ramazan-yildirim">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Ramazan-yildirim&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="GitHub Stats" height="165"/>
-  </a>
-  <a href="https://github.com/Ramazan-yildirim">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Ramazan-yildirim&layout=compact&theme=radical&langs_count=8" alt="Top Languages" height="165"/>
+    <img src="https://ramazan-github-stats.vercel.app/api/stats" alt="Ramazan Yıldırım GitHub stats">
   </a>
 </p>
 
----
+## Languages
 
-### 🔹 GitHub Streak
 <p align="center">
-  <a href="https://github.com/Ramazan-yildirim">
-    <img src="https://github-readme-streak-stats-eight.vercel.app/?user=Ramazan-yildirim&theme=radical" alt="streak"/>
-  </a>
+  <img src="images/top-languages.svg" alt="Most used languages" width="480">
 </p>
 
+## Contributions
 
-### 🔹 GitHub Trophies
 <p align="center">
-  <a href="https://github.com/Ramazan-yildirim">
-    <img src="https://github-trophies.vercel.app/?username=Ramazan-yildirim&theme=radical&row=1&column=7&margin-w=10&margin-h=10" alt="trophies"/>
-  </a>
+  <img src="images/contribution-graph.svg" alt="GitHub contribution graph" width="720">
 </p>
 
----
-
-## 🐍 GitHub Snake Game
 <p align="center">
-  <img src="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg" alt="snake animation"/>
+  <img src="https://raw.githubusercontent.com/Ramazan-yildirim/Ramazan-yildirim/output/github-contribution-grid-snake-dark.svg" alt="GitHub contribution snake animation">
 </p>
