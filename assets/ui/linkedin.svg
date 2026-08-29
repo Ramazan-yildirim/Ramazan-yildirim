@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="168" height="46" viewBox="0 0 168 46" role="img" aria-labelledby="title">
-  <title id="title">Open LinkedIn profile</title>
-  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#161b22"/><stop offset="1" stop-color="#0d1117"/></linearGradient><linearGradient id="accent" x1="0" x2="0" y2="1"><stop stop-color="#79c0ff"/><stop offset="1" stop-color="#1f6feb"/></linearGradient></defs>
-  <rect x=".5" y=".5" width="167" height="45" rx="10" fill="url(#bg)" stroke="#30363d"/><path d="M1 10.5A9.5 9.5 0 0 1 10.5 1H13v44h-2.5A9.5 9.5 0 0 1 1 35.5z" fill="url(#accent)"/>
-  <circle cx="35" cy="23" r="12" fill="#58a6ff" fill-opacity=".11" stroke="#58a6ff" stroke-opacity=".35"/><rect x="28.5" y="16.5" width="13" height="13" rx="2.5" fill="#58a6ff"/><text x="31" y="27" fill="#0d1117" font-family="Arial,sans-serif" font-size="11" font-weight="700">in</text>
-  <text x="55" y="19" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" font-weight="600" letter-spacing="1">NETWORK</text><text x="55" y="33" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13.5" font-weight="650">LinkedIn</text><path d="m148 19 4 4-4 4M143 23h9" fill="none" stroke="#79c0ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="165" height="44" viewBox="0 0 165 44" role="img" aria-labelledby="title">
+  <title id="title">Open LinkedIn</title>
+  <defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#161b22"/><stop offset="1" stop-color="#090d12"/></linearGradient><linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#58a6ff"/><stop offset=".55" stop-color="#30363d"/><stop offset="1" stop-color="#58a6ff"/></linearGradient></defs>
+  <rect x=".75" y=".75" width="163.5" height="42.5" rx="11" fill="url(#surface)" stroke="url(#edge)" stroke-opacity=".55" stroke-width="1.5"/>
+  <rect x="8" y="7" width="30" height="30" rx="9" fill="#58a6ff" fill-opacity=".12" stroke="#58a6ff" stroke-opacity=".4"/>
+  <rect x="15" y="14" width="16" height="16" rx="3" fill="#58a6ff"/><text x="18.2" y="27.2" fill="#0d1117" font-family="Arial,sans-serif" font-size="12.5" font-weight="700">in</text>
+  <text x="48" y="27" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="650">LinkedIn</text>
+  <path d="m142 18 4 4-4 4M136 22h10" fill="none" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

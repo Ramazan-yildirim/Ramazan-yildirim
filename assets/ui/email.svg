@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="150" height="46" viewBox="0 0 150 46" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44" role="img" aria-labelledby="title">
   <title id="title">Send Email</title>
-  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#161b22"/><stop offset="1" stop-color="#0d1117"/></linearGradient><linearGradient id="accent" x1="0" x2="0" y2="1"><stop stop-color="#79c0ff"/><stop offset="1" stop-color="#1f6feb"/></linearGradient></defs>
-  <rect x=".5" y=".5" width="149" height="45" rx="10" fill="url(#bg)" stroke="#30363d"/><path d="M1 10.5A9.5 9.5 0 0 1 10.5 1H13v44h-2.5A9.5 9.5 0 0 1 1 35.5z" fill="url(#accent)"/>
-  <circle cx="35" cy="23" r="12" fill="#58a6ff" fill-opacity=".11" stroke="#58a6ff" stroke-opacity=".35"/><rect x="27.5" y="18" width="15" height="10" rx="1.5" fill="none" stroke="#79c0ff" stroke-width="1.4"/><path d="m28.5 19 6.5 5 6.5-5" fill="none" stroke="#79c0ff" stroke-width="1.4" stroke-linejoin="round"/>
-  <text x="55" y="19" fill="#8b949e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" font-weight="600" letter-spacing="1">CONTACT</text><text x="55" y="33" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13.5" font-weight="650">Email</text><path d="m130 19 4 4-4 4M125 23h9" fill="none" stroke="#79c0ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#161b22"/><stop offset="1" stop-color="#090d12"/></linearGradient><linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#58a6ff"/><stop offset=".55" stop-color="#30363d"/><stop offset="1" stop-color="#58a6ff"/></linearGradient></defs>
+  <rect x=".75" y=".75" width="148.5" height="42.5" rx="11" fill="url(#surface)" stroke="url(#edge)" stroke-opacity=".55" stroke-width="1.5"/>
+  <rect x="8" y="7" width="30" height="30" rx="9" fill="#58a6ff" fill-opacity=".12" stroke="#58a6ff" stroke-opacity=".4"/>
+  <rect x="14.5" y="17" width="17" height="11" rx="2" fill="none" stroke="#79c0ff" stroke-width="1.4"/><path d="m15.5 18 7.5 5.5 7.5-5.5" fill="none" stroke="#79c0ff" stroke-width="1.4" stroke-linejoin="round"/>
+  <text x="48" y="27" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="650">Email</text>
+  <path d="m127 18 4 4-4 4M121 22h10" fill="none" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
