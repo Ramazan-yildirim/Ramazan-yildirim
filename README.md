@@ -5,8 +5,8 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/cv.svg" alt="View CV" height="44"></a>
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/portfolio.svg" alt="View Portfolio" height="44"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/cv.svg" alt="View CV" height="44"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/portfolio.svg" alt="View Portfolio" height="44"></a>
   <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="View CV Repository" height="44"></a>
 </p>
 
@@ -46,8 +46,8 @@
 </table>
 
 <p align="center">
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/download-cv-en.svg" alt="Open English CV PDF" height="44"></a>
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="44"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/download-cv-en.svg" alt="Open English CV PDF" height="44"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="44"></a>
 </p>
 
 ### Portfolio
@@ -57,14 +57,10 @@
     <td align="center" width="50%"><img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-1.png" alt="Ramazan Yıldırım portfolio page 1" width="360"></td>
     <td align="center" width="50%"><img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-2.png" alt="Ramazan Yıldırım portfolio page 2" width="360"></td>
   </tr>
-  <tr>
-    <td align="center" width="50%"><img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-3.png" alt="Ramazan Yıldırım portfolio page 3" width="360"></td>
-    <td align="center" width="50%"><img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-4.png" alt="Ramazan Yıldırım portfolio page 4" width="360"></td>
-  </tr>
 </table>
 
 <p align="center">
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio/blob/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/download-portfolio.svg" alt="Open Portfolio PDF" height="44"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/download-portfolio.svg" alt="Open Portfolio PDF" height="44"></a>
   <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="Open CV and Portfolio Repository" height="44"></a>
 </p>
 
@@ -76,6 +72,10 @@
   <a href="https://dijitaldisdunyasi.com">
     <img src="assets/dijital-dis-dunyasi/logo.svg" alt="Dijital Diş Dünyası" width="410">
   </a>
+</p>
+
+<p align="center">
+  <strong>Co-Founder &amp; Developer</strong>
 </p>
 
 <p align="center">
