@@ -1,21 +1,31 @@
-<img src="images/matrix.svg" alt="Ramazan Yıldırım logo with Matrix animation" width="900">
+<p align="center">
+  <a href="https://ramazanyildirim.vercel.app/">
+    <picture>
+      <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brand/header-dark-compact.svg">
+      <source media="(max-width: 600px)" srcset="assets/brand/header-light-compact.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/brand/header-light.svg">
+      <img src="assets/brand/header-dark.svg" alt="Ramazan Yıldırım — Deep Learning, Computer Vision and Turkish NLP" width="900">
+    </picture>
+  </a>
+</p>
 
 <p align="center">
-  <a href="https://ramazanyildirim.vercel.app/"><img src="assets/ui/website.svg" alt="Personal website" height="38"></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/cv.svg" alt="English CV PDF" height="38"></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/portfolio.svg" alt="Portfolio PDF" height="38"></a>
-  <a href="https://www.linkedin.com/in/ramazanyldr/"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="38"></a>
+  <a href="https://ramazanyildirim.vercel.app/"><img src="assets/ui/website.svg" alt="Personal website" height="42"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/cv.svg" alt="English CV PDF" height="42"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/portfolio.svg" alt="Portfolio PDF" height="42"></a>
+  <a href="https://www.linkedin.com/in/ramazanyldr/"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="42"></a>
 </p>
 
 <p align="center"><a href="mailto:ramazanyldr0103@gmail.com">Email</a> · <a href="#cv-and-portfolio">CV &amp; portfolio documents</a></p>
 
-## About me
+## 👨‍💻 About Me
 
-Computer Engineering student, graduating in 2027. I focus on **deep learning, computer vision, and Turkish NLP**, and build backend and web applications with FastAPI, Laravel, PHP, and Vue.js.
+🎓 Computer Engineering student, graduating in **2027**.<br>
+🤖 Focused on **deep learning, computer vision, and Turkish NLP**.<br>
+💻 Building backend and web applications with **FastAPI, Laravel, PHP, and Vue.js**.<br>
+🧩 Interested in practical, reproducible software and AI systems.
 
-I am interested in practical, reproducible software and AI systems.
-
-## Selected work
+## 🌐 Dijital Diş Dünyası
 
 <p align="center">
   <a href="https://dijitaldisdunyasi.com">
@@ -37,48 +47,52 @@ I am interested in practical, reproducible software and AI systems.
 </p>
 
 
-### [Turkish sentiment analysis](https://github.com/Ramazan-yildirim/berturk_turkish_sentiment_analysis)
+## 🛠️ Tech Stack
 
-BERTurk fine-tuning for positive, negative, and neutral Turkish text classification, with a Streamlit interface and a separate similarity-search workflow.
+<p align="center"><strong>AI &amp; Computer Vision</strong></p>
 
-<sub>Python · BERTurk · Transformers · Streamlit</sub>
+<p align="center">
+  <img src="assets/tech-cards/python.svg" alt="Python" width="108" height="86">
+  <img src="assets/tech-cards/pytorch.svg" alt="PyTorch" width="108" height="86">
+  <img src="assets/tech-cards/huggingface.svg" alt="Hugging Face" width="108" height="86">
+  <img src="assets/tech-cards/opencv.svg" alt="OpenCV" width="108" height="86">
+  <img src="assets/tech-cards/mediapipe.svg" alt="MediaPipe" width="108" height="86">
+</p>
 
-### [Turkish named entity recognition](https://github.com/Ramazan-yildirim/turkish-ner-berturk)
+<p align="center"><strong>Backend &amp; Web</strong></p>
 
-Recognizing people, organizations, and locations in Turkish text with BERTurk and WikiANN, including error analysis and experiments with entity-aware vector search.
+<p align="center">
+  <img src="assets/tech-cards/fastapi.svg" alt="FastAPI" width="108" height="86">
+  <img src="assets/tech-cards/laravel.svg" alt="Laravel" width="108" height="86">
+  <img src="assets/tech-cards/php.svg" alt="PHP" width="108" height="86">
+  <img src="assets/tech-cards/vuejs.svg" alt="Vue.js" width="108" height="86">
+  <img src="assets/tech-cards/javascript.svg" alt="JavaScript" width="108" height="86">
+</p>
 
-<sub>Python · BERTurk · WikiANN · ChromaDB</sub>
+<p align="center"><strong>Tools</strong></p>
 
-## Tech stack
-
-**AI & Computer Vision**
-
-<p><img src="assets/tech/python.svg" alt="Python" title="Python" width="36" height="36">&nbsp; <img src="assets/tech/pytorch.svg" alt="PyTorch" title="PyTorch" width="36" height="36">&nbsp; <img src="assets/tech/huggingface.svg" alt="Hugging Face" title="Hugging Face" width="36" height="36">&nbsp; <img src="assets/tech/opencv.svg" alt="OpenCV" title="OpenCV" width="36" height="36">&nbsp; <img src="assets/tech/mediapipe.svg" alt="MediaPipe" title="MediaPipe" width="36" height="36"></p>
-
-Python · PyTorch · Hugging Face · OpenCV · MediaPipe
-
-**Backend & Web**
-
-<p><img src="assets/tech/fastapi.svg" alt="FastAPI" title="FastAPI" width="36" height="36">&nbsp; <img src="assets/tech/laravel.svg" alt="Laravel" title="Laravel" width="36" height="36">&nbsp; <img src="assets/tech/php.svg" alt="PHP" title="PHP" width="36" height="36">&nbsp; <img src="assets/tech/vuejs.svg" alt="Vue.js" title="Vue.js" width="36" height="36">&nbsp; <img src="assets/tech/javascript.svg" alt="JavaScript" title="JavaScript" width="36" height="36"></p>
-
-FastAPI · Laravel · PHP · Vue.js · JavaScript
-
-**Tools**
-
-<p><img src="assets/tech/docker.svg" alt="Docker" title="Docker" width="36" height="36">&nbsp; <img src="assets/tech/linux.svg" alt="Linux" title="Linux" width="36" height="36">&nbsp; <img src="assets/tech/git.svg" alt="Git" title="Git" width="36" height="36"></p>
-
-Docker · Linux · Git
+<p align="center">
+  <img src="assets/tech-cards/docker.svg" alt="Docker" width="108" height="86">
+  <img src="assets/tech-cards/linux.svg" alt="Linux" width="108" height="86">
+  <img src="assets/tech-cards/git.svg" alt="Git" width="108" height="86">
+</p>
 
 <details>
 <summary>Other technologies</summary>
 
-<p><img src="assets/tech/tensorflow.svg" alt="TensorFlow" title="TensorFlow" width="36" height="36">&nbsp; <img src="assets/tech/csharp.svg" alt="C#" title="C#" width="36" height="36">&nbsp; <img src="assets/tech/dotnet.svg" alt=".NET" title=".NET" width="36" height="36">&nbsp; <img src="assets/tech/html5.svg" alt="HTML5" title="HTML5" width="36" height="36">&nbsp; <img src="assets/tech/css3.svg" alt="CSS3" title="CSS3" width="36" height="36">&nbsp; <img src="assets/tech/powershell.svg" alt="PowerShell" title="PowerShell" width="36" height="36">&nbsp; <img src="assets/tech/github.svg" alt="GitHub" title="GitHub" width="36" height="36"></p>
-
-TensorFlow · C# · .NET · HTML5 · CSS3 · PowerShell · GitHub
+<p align="center">
+  <img src="assets/tech-cards/tensorflow.svg" alt="TensorFlow" width="108" height="86">
+  <img src="assets/tech-cards/csharp.svg" alt="C#" width="108" height="86">
+  <img src="assets/tech-cards/dotnet.svg" alt=".NET" width="108" height="86">
+  <img src="assets/tech-cards/html5.svg" alt="HTML5" width="108" height="86">
+  <img src="assets/tech-cards/css3.svg" alt="CSS3" width="108" height="86">
+  <img src="assets/tech-cards/powershell.svg" alt="PowerShell" width="108" height="86">
+  <img src="assets/tech-cards/github.svg" alt="GitHub" width="108" height="86">
+</p>
 
 </details>
 
-## GitHub activity
+## 📊 GitHub Activity
 
 <p align="center">
   <a href="https://github.com/Ramazan-yildirim">
@@ -102,7 +116,7 @@ TensorFlow · C# · .NET · HTML5 · CSS3 · PowerShell · GitHub
   </picture>
 </p>
 
-## Documents
+## 📄 CV & Portfolio
 
 <a id="cv-and-portfolio"></a>
 <details>
@@ -146,7 +160,7 @@ TensorFlow · C# · .NET · HTML5 · CSS3 · PowerShell · GitHub
 
 </details>
 
-## Contribution Snake
+## 🐍 Contribution Snake
 
 <p align="center">
   <picture>
