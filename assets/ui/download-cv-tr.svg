@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="176" height="44" viewBox="0 0 176 44" role="img" aria-labelledby="title">
-  <title id="title">Open Turkish CV PDF</title>
-  <defs><linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#161b22"/><stop offset="1" stop-color="#090d12"/></linearGradient><linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#58a6ff"/><stop offset=".55" stop-color="#30363d"/><stop offset="1" stop-color="#58a6ff"/></linearGradient></defs>
-  <rect x=".75" y=".75" width="174.5" height="42.5" rx="11" fill="url(#surface)" stroke="url(#edge)" stroke-opacity=".55" stroke-width="1.5"/>
-  <rect x="8" y="7" width="30" height="30" rx="9" fill="#58a6ff" fill-opacity=".12" stroke="#58a6ff" stroke-opacity=".4"/>
-  <path d="M23 14v11M19 21l4 4 4-4M17.5 29h11" fill="none" stroke="#79c0ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="48" y="27" fill="#f0f6fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="650">Türkçe CV</text>
-  <rect x="134" y="13" width="28" height="18" rx="9" fill="#58a6ff" fill-opacity=".12" stroke="#58a6ff" stroke-opacity=".35"/><text x="148" y="25.5" text-anchor="middle" fill="#58a6ff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" font-weight="700">TR</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="174" height="38" viewBox="0 0 174 38" role="img" aria-label="Türkçe CV · PDF"><rect x=".5" y=".5" width="173" height="37" rx="8" fill="#171d24" stroke="#536473"/><text x="15" y="24" fill="#edf1f4" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="600">Türkçe CV · PDF</text><path d="M147 19h12m-5-5 5 5-5 5" fill="none" stroke="#a9bccd" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
