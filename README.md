@@ -4,7 +4,7 @@
       <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brand/header-dark-compact.svg">
       <source media="(max-width: 600px)" srcset="assets/brand/header-light-compact.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/brand/header-light.svg">
-      <img src="assets/brand/header-dark.svg" alt="Ramazan Yıldırım — Deep Learning, Computer Vision and Turkish NLP" width="900">
+      <img src="assets/brand/header-dark.svg" alt="Ramazan Yıldırım RY logo" width="900">
     </picture>
   </a>
 </p>
@@ -14,12 +14,51 @@
   <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/cv.svg" alt="English CV PDF" height="42"></a>
   <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/portfolio.svg" alt="Portfolio PDF" height="42"></a>
   <a href="https://www.linkedin.com/in/ramazanyldr/"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="42"></a>
+  <a href="mailto:ramazanyldr0103@gmail.com"><img src="assets/ui/email.svg" alt="Email Ramazan" height="42"></a>
 </p>
 
+<a id="cv-and-portfolio"></a>
+<details>
+<summary><img src="assets/ui/documents.svg" alt="Open CV and portfolio previews" height="42"></summary>
+
+<br>
+
+### `./cv --list`
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <strong>English CV</strong><br><br>
+      <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/cv_en_preview.png" alt="Ramazan Yıldırım English CV preview" width="360">
+    </td>
+    <td align="center" width="50%">
+      <strong>Türkçe CV</strong><br><br>
+      <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/cv_tr_preview.png" alt="Ramazan Yıldırım Türkçe CV önizlemesi" width="360">
+    </td>
+  </tr>
+</table>
+
 <p align="center">
-  <a href="mailto:ramazanyldr0103@gmail.com"><img src="assets/ui/email.svg" alt="Email Ramazan" height="36"></a>
-  <br><a href="#cv-and-portfolio"><code>cd ~/documents/cv-and-portfolio</code></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/download-cv-en.svg" alt="Open English CV PDF" height="44"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="44"></a>
 </p>
+
+### `./portfolio --preview`
+
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-1.png" alt="Ramazan Yıldırım portfolio page 1" width="360"></td>
+    <td align="center" width="50%"><img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-2.png" alt="Ramazan Yıldırım portfolio page 2" width="360"></td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/download-portfolio.svg" alt="Open Portfolio PDF" height="44"></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="Open CV and Portfolio Repository" height="44"></a>
+</p>
+
+</details>
+
 
 ## `$ whoami`
 
@@ -96,68 +135,24 @@
 <p align="center">
   <a href="https://github.com/Ramazan-yildirim">
   <picture>
-    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/stats?theme=dark&amp;layout=compact">
-    <source media="(max-width: 600px)" srcset="https://ramazan-github-stats.vercel.app/api/stats?theme=light&amp;layout=compact">
-    <source media="(prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/stats?theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://ramazan-github-stats.vercel.app/api/stats?theme=light">
-    <img src="https://ramazan-github-stats.vercel.app/api/stats" alt="GitHub calendar contributions since 2023, current streak and public repository metrics" width="720">
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2&amp;theme=dark&amp;layout=compact">
+    <source media="(max-width: 600px)" srcset="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2&amp;theme=light&amp;layout=compact">
+    <source media="(prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2&amp;theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2&amp;theme=light">
+    <img src="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2" alt="GitHub calendar contributions since 2023, current streak and public repository metrics" width="720">
   </picture>
   </a>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/languages?theme=dark&amp;layout=compact">
-    <source media="(max-width: 600px)" srcset="https://ramazan-github-stats.vercel.app/api/languages?theme=light&amp;layout=compact">
-    <source media="(prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/languages?theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://ramazan-github-stats.vercel.app/api/languages?theme=light">
-    <img src="https://ramazan-github-stats.vercel.app/api/languages" alt="Language byte distribution across owned public repositories, excluding forks" width="720">
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2&amp;theme=dark&amp;layout=compact">
+    <source media="(max-width: 600px)" srcset="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2&amp;theme=light&amp;layout=compact">
+    <source media="(prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2&amp;theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2&amp;theme=light">
+    <img src="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2" alt="Language byte distribution across owned public repositories, excluding forks" width="720">
   </picture>
 </p>
-
-## `$ ls ~/documents/cv-and-portfolio`
-
-<a id="cv-and-portfolio"></a>
-<details>
-<summary><code>open ~/documents</code> — CV &amp; Portfolio</summary>
-
-<br>
-
-### `./cv --list`
-
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <strong>English CV</strong><br><br>
-      <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/cv_en_preview.png" alt="Ramazan Yıldırım English CV preview" width="360">
-    </td>
-    <td align="center" width="50%">
-      <strong>Türkçe CV</strong><br><br>
-      <img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/cv_tr_preview.png" alt="Ramazan Yıldırım Türkçe CV önizlemesi" width="360">
-    </td>
-  </tr>
-</table>
-
-<p align="center">
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/download-cv-en.svg" alt="Open English CV PDF" height="44"></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="44"></a>
-</p>
-
-### `./portfolio --preview`
-
-<table>
-  <tr>
-    <td align="center" width="50%"><img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-1.png" alt="Ramazan Yıldırım portfolio page 1" width="360"></td>
-    <td align="center" width="50%"><img src="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/preview-2.png" alt="Ramazan Yıldırım portfolio page 2" width="360"></td>
-  </tr>
-</table>
-
-<p align="center">
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/download-portfolio.svg" alt="Open Portfolio PDF" height="44"></a>
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="Open CV and Portfolio Repository" height="44"></a>
-</p>
-
-</details>
 
 ## `$ ./contribution-snake`
 

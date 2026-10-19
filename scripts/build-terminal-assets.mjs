@@ -48,19 +48,9 @@ function logo(x,y,stepX,stepY) {
 }
 const cursor=(x,y)=>`<rect x="${x}" y="${y-12}" width="8" height="15" class="green"/>`;
 function header(theme,compact) {
-  const w=compact?360:900,h=compact?378:320;
-  let b=txt(24,65,'ramazan@linux',13,'green')+txt(compact?134:141,65,':~/profile $',13,'muted');
-  b+=txt(24,88,'./render-logo --mode=terminal',compact?11:13,'text');
-  b+=logo(compact?30:35,compact?111:110,compact?7.5:6.8,compact?7.1:8);
-  if(compact) {
-    b+=txt(24,263,'RAMAZAN YILDIRIM',23,'text','font-weight="700"')+txt(24,289,'Deep learning / Computer vision',12,'cyan')+txt(24,311,'Turkish NLP / Backend & web',12,'cyan');
-    b+=`<path d="M24 331h312" class="rule"/>`+txt(24,357,'$ ready to build',12,'green')+cursor(158,357);
-  } else {
-    b+=`<path d="M340 112v128" class="rule"/>`+txt(375,133,'RAMAZAN YILDIRIM',32,'text','font-weight="700"');
-    b+=txt(375,169,'Deep learning / Computer vision',16,'cyan')+txt(375,197,'Turkish NLP / Backend & web',16,'cyan')+txt(375,232,'// engineering ideas into working systems',12,'muted');
-    b+=`<path d="M24 267h852" class="rule"/>`+txt(24,295,'$ ready to build',13,'green')+cursor(169,295)+txt(876,295,'[ profile session / RY ]',12,'muted','text-anchor="end"');
-  }
-  return terminal('ramazan@linux: ~/profile',w,h,b,theme,'Ramazan Yıldırım. The original RY logo rendered as terminal character cells. Deep learning, computer vision, Turkish NLP, backend and web.');
+  const w=compact?360:900,h=compact?200:240;
+  const stepX=compact?7.5:9,stepY=compact?9:11;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Ramazan Yıldırım RY logo"><style>.green{fill:${palettes[theme].green}}</style>${logo((w-40*stepX)/2,(h-16*stepY)/2,stepX,stepY)}</svg>\n`;
 }
 const tux = ['    .--.    ','   |o_o |   ','   |:_/ |   ','  //   \\ \\  ',' (|     | ) ','/\'\\_   _/`\\','\\___)=(___/'];
 function about(compact) {
@@ -96,7 +86,7 @@ async function project(compact) {
   }
   return terminal('ramazan@linux: ~/projects',compact?360:900,compact?376:284,b,'dark','Dijital Diş Dünyası. Co-Founder & Developer. An integrated digital platform connecting clinics, laboratories, suppliers, patients and professionals across procurement, operations, communication and AI-assisted workflows.');
 }
-const buttons={website:['./website',160],cv:['./cv --en',160],portfolio:['./portfolio',182],linkedin:['./linkedin',172],email:['./mail',138],'visit-platform':['./open dijitaldisdunyasi.com',330],'download-cv-en':['./download cv --en',244],'download-cv-tr':['./download cv --tr',244],'download-portfolio':['./download portfolio',270],'cv-repository':['./open cv-repository',270]};
+const buttons={website:['./website',160],cv:['./cv --en',160],portfolio:['./portfolio',182],linkedin:['./linkedin',172],email:['./mail',138],documents:['cd ~/documents/cv-and-portfolio',338],'visit-platform':['./open dijitaldisdunyasi.com',330],'download-cv-en':['./download cv --en',244],'download-cv-tr':['./download cv --tr',244],'download-portfolio':['./download portfolio',270],'cv-repository':['./open cv-repository',270]};
 await mkdir(path.join(root,'assets/terminal'),{recursive:true});
 for(const theme of ['dark','light']) for(const compact of [false,true]) await writeFile(path.join(root,`assets/brand/header-${theme}${compact?'-compact':''}.svg`),header(theme,compact));
 for(const compact of [false,true]) {
