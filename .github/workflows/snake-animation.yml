@@ -38,8 +38,8 @@ jobs:
           # Oluşturulacak SVG dosyalarının listesi
           # Koyu tema için "dark" olanı kullanacağız
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?color_snake=#6a329f&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+            dist/github-contribution-grid-snake.svg?color_snake=#246b39&color_dots=#e9eee8,#c7dfc9,#91bb97,#51875d,#246b39
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#8bd49c&color_dots=#161b22,#23452e,#386c46,#61a36e,#8bd49c
             dist/ocean.svg?palette=ocean
 
       - name: Push to output branch

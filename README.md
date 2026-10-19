@@ -16,30 +16,29 @@
   <a href="https://www.linkedin.com/in/ramazanyldr/"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="42"></a>
 </p>
 
-<p align="center"><a href="mailto:ramazanyldr0103@gmail.com">Email</a> · <a href="#cv-and-portfolio">CV &amp; portfolio documents</a></p>
+<p align="center">
+  <a href="mailto:ramazanyldr0103@gmail.com"><img src="assets/ui/email.svg" alt="Email Ramazan" height="36"></a>
+  <br><a href="#cv-and-portfolio"><code>cd ~/documents/cv-and-portfolio</code></a>
+</p>
 
-## 👨‍💻 About Me
+## `$ whoami`
 
-🎓 Computer Engineering student, graduating in **2027**.<br>
-🤖 Focused on **deep learning, computer vision, and Turkish NLP**.<br>
-💻 Building backend and web applications with **FastAPI, Laravel, PHP, and Vue.js**.<br>
-🧩 Interested in practical, reproducible software and AI systems.
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/terminal/about-compact.svg">
+    <img src="assets/terminal/about.svg" alt="About me: Computer Engineering student graduating in 2027. Deep learning, computer vision and Turkish NLP. Building with FastAPI, Laravel, PHP and Vue.js. Interested in practical, reproducible software and AI systems." width="900">
+  </picture>
+</p>
 
-## 🌐 Dijital Diş Dünyası
+## `$ ls ~/projects/dijital-dis-dunyasi`
 
 <p align="center">
   <a href="https://dijitaldisdunyasi.com">
-    <img src="assets/dijital-dis-dunyasi/logo.svg" alt="Dijital Diş Dünyası" width="410">
+    <picture>
+      <source media="(max-width: 600px)" srcset="assets/terminal/project-compact.svg">
+      <img src="assets/terminal/project.svg" alt="Dijital Diş Dünyası — Co-Founder &amp; Developer. An integrated digital platform for clinics, laboratories, suppliers, patients and professionals. Procurement, operations, communication and AI-assisted workflows." width="900">
+    </picture>
   </a>
-</p>
-
-<p align="center">
-  <strong>Co-Founder &amp; Developer</strong>
-</p>
-
-<p align="center">
-  <strong>An integrated digital platform for the dental ecosystem.</strong><br>
-  <sub>Connecting clinics, laboratories, suppliers, patients, and professionals across procurement, operations, communication, and AI-assisted workflows.</sub>
 </p>
 
 <p align="center">
@@ -47,9 +46,9 @@
 </p>
 
 
-## 🛠️ Tech Stack
+## `$ ls ~/stack`
 
-<p align="center"><strong>AI &amp; Computer Vision</strong></p>
+<p align="center"><code>~/stack/ai-and-computer-vision</code></p>
 
 <p align="center">
   <img src="assets/tech-cards/python.svg" alt="Python" width="108" height="86">
@@ -59,7 +58,7 @@
   <img src="assets/tech-cards/mediapipe.svg" alt="MediaPipe" width="108" height="86">
 </p>
 
-<p align="center"><strong>Backend &amp; Web</strong></p>
+<p align="center"><code>~/stack/backend-and-web</code></p>
 
 <p align="center">
   <img src="assets/tech-cards/fastapi.svg" alt="FastAPI" width="108" height="86">
@@ -69,7 +68,7 @@
   <img src="assets/tech-cards/javascript.svg" alt="JavaScript" width="108" height="86">
 </p>
 
-<p align="center"><strong>Tools</strong></p>
+<p align="center"><code>~/stack/tools</code></p>
 
 <p align="center">
   <img src="assets/tech-cards/docker.svg" alt="Docker" width="108" height="86">
@@ -78,7 +77,7 @@
 </p>
 
 <details>
-<summary>Other technologies</summary>
+<summary><code>ls ~/stack/other</code> — Other technologies</summary>
 
 <p align="center">
   <img src="assets/tech-cards/tensorflow.svg" alt="TensorFlow" width="108" height="86">
@@ -92,7 +91,7 @@
 
 </details>
 
-## 📊 GitHub Activity
+## `$ gh stats --user Ramazan-yildirim`
 
 <p align="center">
   <a href="https://github.com/Ramazan-yildirim">
@@ -116,15 +115,15 @@
   </picture>
 </p>
 
-## 📄 CV & Portfolio
+## `$ ls ~/documents/cv-and-portfolio`
 
 <a id="cv-and-portfolio"></a>
 <details>
-<summary><strong>CV &amp; Portfolio</strong></summary>
+<summary><code>open ~/documents</code> — CV &amp; Portfolio</summary>
 
 <br>
 
-### CV
+### `./cv --list`
 
 <table>
   <tr>
@@ -144,7 +143,7 @@
   <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="44"></a>
 </p>
 
-### Portfolio
+### `./portfolio --preview`
 
 <table>
   <tr>
@@ -160,7 +159,7 @@
 
 </details>
 
-## 🐍 Contribution Snake
+## `$ ./contribution-snake`
 
 <p align="center">
   <picture>
@@ -169,3 +168,5 @@
     <img src="https://raw.githubusercontent.com/Ramazan-yildirim/Ramazan-yildirim/output/github-contribution-grid-snake.svg" alt="GitHub contribution snake animation" width="900">
   </picture>
 </p>
+
+<p align="center"><code>ramazan@linux:~ $ exit</code><br><sub>Thanks for visiting. See you in the next session.</sub></p>
