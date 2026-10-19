@@ -24,54 +24,66 @@ function terminal(title,width,height,body,theme='dark',description=title) {
 ${txt(width/2,23,title,width===360?10:12,'muted','text-anchor="middle"')}
 ${body}</svg>\n`;
 }
-const logoRows = [
- ' ################                       ',
- '  #################               ##### ',
- '   #################             #####  ',
- '                #####          #####    ',
- '                 ######       #####     ',
- '                ########    #####       ',
- '    #####   ######## ##### #####        ',
- '     ######  ######   ##### ##          ',
- '      ######  ###      #####            ',
- '       #######          #####           ',
- '         ######         #####           ',
- '          #######       #####           ',
- '            ######      #####           ',
- '             ######     #####           ',
- '              #######   #####           ',
- '                ######  #####           ',
-];
-function logo(x,y,stepX,stepY) {
-  // Sampled from the existing RY mark; vector cells also work without a block font.
-  return `<g class="green">${logoRows.flatMap((row,r)=>[...row].map((c,col)=>c==='#'?`<rect x="${x+col*stepX}" y="${y+r*stepY}" width="${stepX-1.2}" height="${stepY-1.2}"/>`:'')).join('')}</g>`;
-}
+// A finer luminance sample of the original RY mark, kept as data to avoid dependencies.
+const logoRows=JSON.parse(await readFile(new URL('./ry-grid.json',import.meta.url),'utf8'));
 const cursor=(x,y)=>`<rect x="${x}" y="${y-12}" width="8" height="15" class="green"/>`;
 function header(theme,compact) {
-  const w=compact?360:900,h=compact?200:240;
-  const stepX=compact?7.5:9,stepY=compact?9:11;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Ramazan Yıldırım RY logo"><style>.green{fill:${palettes[theme].green}}</style>${logo((w-40*stepX)/2,(h-16*stepY)/2,stepX,stepY)}</svg>\n`;
+  const w=compact?360:900,h=compact?302:374,step=compact?3.1:4,depth=compact?6:8;
+  const x=(w-logoRows[0].length*step-depth)/2,y=(h-logoRows.length*step+depth)/2;
+  const cells=logoRows.flatMap((row,r)=>[...row].map((c,col)=>c==='#'?`<rect x="${(col*step).toFixed(2)}" y="${(r*step).toFixed(2)}" width="${(step*.79).toFixed(2)}" height="${(step*.79).toFixed(2)}" rx=".15"/>`:'')).join('');
+  const layers=Array.from({length:depth},(_,i)=>{
+    const d=depth-i,shade=Math.round(83+(1-d/depth)*76);
+    return `<use href="#cells" transform="translate(${d} ${-d})" fill="rgb(${shade},${shade+8},${shade+17})"/>`;
+  }).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Ramazan Yıldırım RY logo"><desc>White RY logo made from small square cells with shaded three-dimensional depth.</desc><defs><linearGradient id="porcelain" x1="0" y1="0" x2=".75" y2="1"><stop stop-color="#ffffff"/><stop offset=".5" stop-color="#f4f6f9"/><stop offset="1" stop-color="#e5eaf0"/></linearGradient><g id="cells">${cells}</g></defs><g transform="translate(${x.toFixed(2)} ${y.toFixed(2)})">${layers}<use href="#cells" fill="url(#porcelain)" stroke="${theme==='light'?'#a4afbd':'#d8e0e9'}" stroke-width=".18"/></g></svg>\n`;
 }
-const tux = ['    .--.    ','   |o_o |   ','   |:_/ |   ','  //   \\ \\  ',' (|     | ) ','/\'\\_   _/`\\','\\___)=(___/'];
+function tux(x,y,width,height) {
+  return `<svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="0 0 160 196" aria-hidden="true">
+<defs><linearGradient id="tux-coat" x2=".8" y2="1"><stop stop-color="#46515f"/><stop offset=".45" stop-color="#202a36"/><stop offset="1" stop-color="#111820"/></linearGradient><linearGradient id="tux-belly" x2=".7" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient><linearGradient id="tux-gold" x2=".7" y2="1"><stop stop-color="#ffd889"/><stop offset="1" stop-color="#d99b37"/></linearGradient></defs>
+<ellipse cx="80" cy="184" rx="62" ry="7" fill="#000000" opacity=".22"/>
+<path d="M48 83C32 93 20 119 16 145c-1 8 6 12 13 7l21-23M112 83c16 10 28 36 32 62 1 8-6 12-13 7l-21-23" fill="url(#tux-coat)" stroke="#566171" stroke-width="1.3"/>
+<path d="M47 78c-6-10-6-18-5-29C44 20 59 9 80 9s36 11 38 40c1 11 1 19-5 29 9 20 18 41 16 62-1 26-20 39-49 39s-48-13-49-39c-2-21 7-42 16-62Z" fill="url(#tux-coat)" stroke="#687484" stroke-width="1.2"/>
+<path d="M59 78c-9 14-19 35-18 55 0 23 15 37 39 37s39-14 39-37c1-20-9-41-18-55-8-9-34-9-42 0Z" fill="url(#tux-belly)"/>
+<ellipse cx="66" cy="53" rx="12" ry="19" fill="#f8fafc" transform="rotate(-8 66 53)"/><ellipse cx="94" cy="53" rx="12" ry="19" fill="#f8fafc" transform="rotate(8 94 53)"/>
+<ellipse cx="69" cy="57" rx="4.5" ry="8" fill="#111820"/><ellipse cx="91" cy="57" rx="4.5" ry="8" fill="#111820"/><circle cx="70" cy="54" r="1.7" fill="#ffffff"/><circle cx="92" cy="54" r="1.7" fill="#ffffff"/>
+<path d="M59 74c6-9 15-13 21-13s15 4 21 13c-5 8-13 15-21 15S64 82 59 74Z" fill="url(#tux-gold)" stroke="#b88639" stroke-width="1.1"/><path d="M64 75q16 8 32 0" fill="none" stroke="#ac7b32" stroke-width="1.2"/>
+<path d="m48 151-19 7c-6 1-8 6-6 11l-7 5c-4 4-2 9 4 10l33 3c11 0 17-6 17-14-1-9-12-21-22-22Z" fill="url(#tux-gold)" stroke="#b88639" stroke-width="1.3"/>
+<path d="m112 151 19 7c6 1 8 6 6 11l7 5c4 4 2 9-4 10l-33 3c-11 0-17-6-17-14 1-9 12-21 22-22Z" fill="url(#tux-gold)" stroke="#b88639" stroke-width="1.3"/>
+<path d="m28 168 9 7m2-13 9 10m84-4-9 7m-2-13-9 10" stroke="#bd8c3f" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+</svg>`;
+}
+const aboutFields=[
+  ['education','Computer Engineering | Final Year'],
+  ['university','Burdur Mehmet Akif Ersoy University'],
+  ['role','Co-Founder & Developer | Dijital Diş Dünyası',['Co-Founder & Developer |','Dijital Diş Dünyası']],
+  ['focus','Deep Learning / Computer Vision / Turkish NLP',['Deep Learning / Computer Vision /','Turkish NLP']],
+  ['exploring','LLM Fine-Tuning / VLMs / AI Agents'],
+  ['mindset','Turning ideas into real-world solutions'],
+];
 function about(compact) {
   const w=compact?360:900;
-  let b=txt(24,66,compact?'$ cat ~/about.conf':'$ neofetch --config ~/about.conf',compact?12:14,'green');
+  let b=txt(24,66,'$ whoami',compact?12:14,'green');
   if(!compact) {
-    tux.forEach((line,i)=>b+=txt(34,112+i*19,line,20,i<3?'amber':'text','xml:space="preserve"'));
-    ['green','cyan','amber','text'].forEach((color,i)=>b+=`<rect x="${44+i*30}" y="267" width="27" height="13" class="${color}"/>`);
-  }
+    b+=tux(51,91,152,186);
+    ['green','cyan','amber','text'].forEach((color,i)=>b+=`<rect x="${65+i*30}" y="285" width="27" height="8" class="${color}"/>`);
+  } else b+=tux(273,79,58,71);
   const x=compact?24:260;
   b+=txt(x,compact?100:104,'ramazan@linux',compact?19:21,'cyan','font-weight="700"');
   b+=txt(x,compact?122:129,'-------------',14,'muted');
   if(compact) {
-    const rows=[['education','Computer Engineering'],['graduation','2027'],['focus','Deep learning / Computer vision'],['language','Turkish NLP'],['build','FastAPI / Laravel / PHP / Vue.js'],['mindset','Practical, reproducible systems']];
-    rows.forEach(([key,val],i)=>{b+=txt(x,154+i*44,key,11,'green')+txt(x,173+i*44,val,12,'text');});
-    b+=`<path d="M24 412h312" class="rule"/>`+txt(24,437,'$ ',13,'green')+cursor(42,437);
+    let y=159;
+    aboutFields.forEach(([key,val,lines=[val]])=>{
+      b+=txt(x,y,`${key}:`,11,'green');
+      lines.forEach((line,i)=>b+=txt(x,y+19+i*18,line,12));
+      y+=44+(lines.length-1)*18;
+    });
+    b+=`<path d="M24 ${y-4}h312" class="rule"/>`+txt(24,y+21,'$ ',13,'green')+cursor(42,y+21);
+    return terminal('ramazan@linux: ~',w,y+42,b,'dark',aboutFields.map(([key,val])=>`${key}: ${val}`).join('. '));
   } else {
-    [['education','Computer Engineering student'],['graduation','2027'],['focus','Deep learning / Computer vision'],['language','Turkish NLP'],['build','FastAPI / Laravel / PHP / Vue.js'],['mindset','Practical, reproducible software & AI']].forEach(([key,val],i)=>{b+=txt(x,156+i*25,key,13,'green')+txt(x+114,156+i*25,val,13);});
+    aboutFields.forEach(([key,val],i)=>{b+=txt(x,156+i*25,`${key}:`,13,'green')+txt(x+114,156+i*25,val,13);});
     b+=`<path d="M24 301h852" class="rule"/>`+txt(24,326,'$ ',13,'green')+cursor(42,326);
   }
-  return terminal('ramazan@linux: ~',w,compact?458:348,b,'dark','About Ramazan Yıldırım: Computer Engineering student graduating in 2027. Focused on deep learning, computer vision and Turkish NLP. Building with FastAPI, Laravel, PHP and Vue.js. Interested in practical, reproducible software and AI systems.');
+  return terminal('ramazan@linux: ~',w,348,b,'dark',aboutFields.map(([key,val])=>`${key}: ${val}`).join('. '));
 }
 async function project(compact) {
   const original=await readFile(path.join(root,'assets/dijital-dis-dunyasi/logo.svg'),'utf8');
@@ -86,7 +98,7 @@ async function project(compact) {
   }
   return terminal('ramazan@linux: ~/projects',compact?360:900,compact?376:284,b,'dark','Dijital Diş Dünyası. Co-Founder & Developer. An integrated digital platform connecting clinics, laboratories, suppliers, patients and professionals across procurement, operations, communication and AI-assisted workflows.');
 }
-const buttons={website:['./website',160],cv:['./cv --en',160],portfolio:['./portfolio',182],linkedin:['./linkedin',172],email:['./mail',138],documents:['cd ~/documents/cv-and-portfolio',338],'visit-platform':['./open dijitaldisdunyasi.com',330],'download-cv-en':['./download cv --en',244],'download-cv-tr':['./download cv --tr',244],'download-portfolio':['./download portfolio',270],'cv-repository':['./open cv-repository',270]};
+const buttons={website:['./website',160],cv:['./cv --en',160],portfolio:['./portfolio',182],linkedin:['./linkedin',172],email:['./mail',138],'visit-platform':['./open dijitaldisdunyasi.com',330],'download-cv-en':['./download cv --en',244],'download-cv-tr':['./download cv --tr',244],'download-portfolio':['./download portfolio',270],'cv-repository':['./open cv-repository',270]};
 await mkdir(path.join(root,'assets/terminal'),{recursive:true});
 for(const theme of ['dark','light']) for(const compact of [false,true]) await writeFile(path.join(root,`assets/brand/header-${theme}${compact?'-compact':''}.svg`),header(theme,compact));
 for(const compact of [false,true]) {
