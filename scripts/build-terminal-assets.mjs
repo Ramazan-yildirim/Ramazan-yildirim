@@ -125,12 +125,14 @@ for(const [name,[value,w,action='open']] of Object.entries(buttons)) for(const t
   body+=`<path d="${icon}" stroke="${stroke}" stroke-width="1.3" fill="none"/>`;
   await writeFile(path.join(root,`assets/ui/${name}${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="36" viewBox="0 0 ${w} 36" role="img" aria-label="${xml(value)}">${body}</svg>\n`);
 }
-for(const [name,title] of [['cv','CV'],['portfolio','Portfolio']]) for(const theme of ['dark','light']) {
-  const p=headerPalettes[theme],line=theme==='dark'?'#30363d':'#d0d7de';
-  const body=label(16,25,title,13,p.text)
-    +`<path d="M136 10v20" stroke="${line}"/>`
-    +label(148,25,'preview',10,p.muted);
-  await writeFile(path.join(root,`assets/ui/${name}-preview${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="208" height="40" viewBox="0 0 208 40" role="img" aria-label="Toggle ${xml(title)} previews">${body}</svg>\n`);
+for(const [name,title] of [['cv','CV'],['portfolio','Portfolio']]) {
+  const p=headerPalettes.dark,light=headerPalettes.light;
+  // One inline <img> keeps the native summary marker beside the label. Theme inside the SVG.
+  const themeStyle=`<style>@media (prefers-color-scheme:light){.preview-title{fill:${light.text}}.preview-meta{fill:${light.muted}}.preview-rule{stroke:#d0d7de}}</style>`;
+  const body=label(16,25,title,13,p.text,'class="preview-title"')
+    +`<path d="M136 10v20" stroke="#30363d" class="preview-rule"/>`
+    +label(148,25,'preview',10,p.muted,'class="preview-meta"');
+  await writeFile(path.join(root,`assets/ui/${name}-preview.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="208" height="40" viewBox="0 0 208 40" role="img" aria-label="Toggle ${xml(title)} previews">${themeStyle}${body}</svg>\n`);
 }
 for(const name of await readdir(path.join(root,'assets/tech-cards'))) {
   if(!name.endsWith('.svg'))continue;
