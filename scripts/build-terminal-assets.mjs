@@ -28,8 +28,8 @@ ${body}</svg>\n`;
 const logoRows=JSON.parse(await readFile(new URL('./ry-grid.json',import.meta.url),'utf8'));
 const cursor=(x,y)=>`<rect x="${x}" y="${y-12}" width="8" height="15" class="green"/>`;
 const headerPalettes = {
-  dark: {bg:'#0d1117',text:'#e6edf3',muted:'#9ba8b7',line:'#30363d',accent:'#8bd49c',primary:'#14241b'},
-  light: {bg:'#ffffff',text:'#24292f',muted:'#57606a',line:'#d0d7de',accent:'#216e39',primary:'#edf7ef'},
+  dark: {text:'#e6edf3',muted:'#9ba8b7'},
+  light: {text:'#24292f',muted:'#57606a'},
 };
 function label(x,y,value,size,fill,extra='') {
   return `<text x="${x}" y="${y}" fill="${fill}" font-family="Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="${size}" ${extra}>${xml(value)}</text>`;
@@ -50,26 +50,10 @@ function blockMark(x,y,fill,compact) {
   }).join('');
 }
 function header(theme,compact) {
-  const p=headerPalettes[theme],w=compact?360:900,h=compact?314:256;
-  let body=`<rect width="${w}" height="${h}" fill="${p.bg}"/>`;
-  body+=label(24,27,'ramazan@linux',11,p.accent)+label(compact?128:132,27,': ~',11,p.muted);
-  body+=label(w-24,27,'~/profile',11,p.muted,'text-anchor="end"');
-  body+=`<path d="M24 42.5H${w-24}" stroke="${p.line}"/>`;
-  if(compact) {
-    body+=blockMark(68,65,p.text,true);
-    body+=label(24,230,'Ramazan Yıldırım',23,p.text,'font-weight="700"');
-    body+=label(24,257,'Deep Learning / Computer Vision',12,p.muted);
-    body+=label(24,277,'Turkish NLP',12,p.muted);
-    body+=label(24,305,'$ ls ~/links',11,p.accent);
-  } else {
-    body+=blockMark(38,69,p.text,false);
-    body+=label(370,99,'Ramazan Yıldırım',30,p.text,'font-weight="700"');
-    body+=label(370,136,'Deep Learning / Computer Vision',16,p.muted);
-    body+=label(370,162,'Turkish NLP',16,p.muted);
-    body+=label(370,202,'$ ./build --ideas-to-reality',12,p.accent);
-    body+=label(24,247,'$ ls ~/links',12,p.accent);
-  }
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — terminal profile</title><desc id="desc">RY logo drawn with terminal block characters. Deep Learning / Computer Vision / Turkish NLP.</desc>${body}</svg>\n`;
+  const p=headerPalettes[theme],w=compact?360:900,h=compact?200:232;
+  const markWidth=44*(compact?8.5:10)*.6;
+  const body=blockMark((w-markWidth)/2,compact?32:38,p.text,compact);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — RY logo</title><desc id="desc">Centered RY logo drawn with terminal block characters on a transparent background.</desc>${body}</svg>\n`;
 }
 function tux(x,y,width,height) {
   return `<svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="0 0 160 196" aria-hidden="true">
@@ -132,18 +116,17 @@ async function project(compact) {
   }
   return terminal('ramazan@linux: ~/projects',compact?360:900,compact?376:284,b,'dark','Dijital Diş Dünyası. Co-Founder & Developer. An integrated digital platform connecting clinics, laboratories, suppliers, patients and professionals across procurement, operations, communication and AI-assisted workflows.');
 }
-const buttons={website:['website',126,true],cv:['cv.pdf',116],portfolio:['portfolio',144],linkedin:['linkedin',136],email:['email',108],'visit-platform':['dijitaldisdunyasi.com',220],'download-cv-en':['cv.en.pdf',144],'download-cv-tr':['cv.tr.pdf',144],'download-portfolio':['portfolio.pdf',178],'cv-repository':['cv-repository',178]};
+const buttons={website:['website',126],cv:['cv.pdf',116],portfolio:['portfolio',144],linkedin:['linkedin',136],email:['email',108],'visit-platform':['dijitaldisdunyasi.com',220],'download-cv-en':['cv.en.pdf',144],'download-cv-tr':['cv.tr.pdf',144],'download-portfolio':['portfolio.pdf',178],'cv-repository':['cv-repository',178]};
 await mkdir(path.join(root,'assets/terminal'),{recursive:true});
 for(const theme of ['dark','light']) for(const compact of [false,true]) await writeFile(path.join(root,`assets/brand/header-${theme}${compact?'-compact':''}.svg`),header(theme,compact));
 for(const compact of [false,true]) {
   await writeFile(path.join(root,`assets/terminal/about${compact?'-compact':''}.svg`),about(compact));
   await writeFile(path.join(root,`assets/terminal/project${compact?'-compact':''}.svg`),await project(compact));
 }
-for(const [name,[value,w,primary=false]] of Object.entries(buttons)) for(const theme of ['dark','light']) {
-  const p=headerPalettes[theme],stroke=primary?p.accent:p.muted;
-  let body=primary?`<rect x=".5" y=".5" width="${w-1}" height="35" fill="${p.primary}"/>`:'';
-  body+=`<path d="M9 7H4v22h5M${w-9} 7h5v22h-5" stroke="${stroke}" fill="none"/>`;
-  body+=label(16,23,value,13,primary?p.accent:p.text);
+for(const [name,[value,w]] of Object.entries(buttons)) for(const theme of ['dark','light']) {
+  const p=headerPalettes[theme],stroke=p.muted;
+  let body=`<path d="M9 7H4v22h5M${w-9} 7h5v22h-5" stroke="${stroke}" fill="none"/>`;
+  body+=label(16,23,value,13,p.text);
   body+=`<path d="M${w-30} 22l8-8m-7 0h7v7" stroke="${stroke}" stroke-width="1.3" fill="none"/>`;
   await writeFile(path.join(root,`assets/ui/${name}${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="36" viewBox="0 0 ${w} 36" role="img" aria-label="${xml(value)}">${body}</svg>\n`);
 }

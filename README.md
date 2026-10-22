@@ -4,7 +4,7 @@
       <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brand/header-dark-compact.svg">
       <source media="(max-width: 600px)" srcset="assets/brand/header-light-compact.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/brand/header-light.svg">
-      <img src="assets/brand/header-dark.svg" alt="Ramazan Yıldırım — RY terminal logo. Deep Learning / Computer Vision / Turkish NLP." width="900">
+      <img src="assets/brand/header-dark.svg" alt="Ramazan Yıldırım — RY terminal logo" width="900">
     </picture>
   </a>
 </p>
