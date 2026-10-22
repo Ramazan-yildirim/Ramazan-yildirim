@@ -125,14 +125,13 @@ for(const [name,[value,w,action='open']] of Object.entries(buttons)) for(const t
   body+=`<path d="${icon}" stroke="${stroke}" stroke-width="1.3" fill="none"/>`;
   await writeFile(path.join(root,`assets/ui/${name}${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="36" viewBox="0 0 ${w} 36" role="img" aria-label="${xml(value)}">${body}</svg>\n`);
 }
-for(const theme of ['dark','light']) {
+for(const [name,title] of [['cv','CV'],['portfolio','Portfolio']]) for(const theme of ['dark','light']) {
   const p=headerPalettes[theme],line=theme==='dark'?'#30363d':'#d0d7de';
-  const body=`<rect x=".5" y=".5" width="239" height="39" rx="3" fill="none" stroke="${line}"/>`
-    +label(14,25,'>_',14,p.muted)
-    +label(44,25,'CV & Portfolio',13,p.text)
-    +`<path d="M168 10v20" stroke="${line}"/>`
-    +label(180,25,'preview',10,p.muted);
-  await writeFile(path.join(root,`assets/ui/document-previews${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="240" height="40" viewBox="0 0 240 40" role="img" aria-label="Toggle CV and portfolio previews">${body}</svg>\n`);
+  const body=`<rect x=".5" y=".5" width="207" height="39" rx="3" fill="none" stroke="${line}"/>`
+    +label(16,25,title,13,p.text)
+    +`<path d="M136 10v20" stroke="${line}"/>`
+    +label(148,25,'preview',10,p.muted);
+  await writeFile(path.join(root,`assets/ui/${name}-preview${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="208" height="40" viewBox="0 0 208 40" role="img" aria-label="Toggle ${xml(title)} previews">${body}</svg>\n`);
 }
 for(const name of await readdir(path.join(root,'assets/tech-cards'))) {
   if(!name.endsWith('.svg'))continue;

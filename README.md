@@ -19,7 +19,7 @@
 
 <a id="cv-and-portfolio"></a>
 <details>
-<summary><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/document-previews-light.svg"><img src="assets/ui/document-previews.svg" alt="Show or hide CV and portfolio previews" width="240" height="40"></picture></summary>
+<summary><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-preview-light.svg"><img src="assets/ui/cv-preview.svg" alt="Show or hide CV previews" width="208" height="40" align="middle"></picture></summary>
 
 <br>
 
@@ -42,6 +42,13 @@
   <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-en-light.svg"><img src="assets/ui/download-cv-en.svg" alt="Download English CV PDF" height="36"></picture></a>
   <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-tr-light.svg"><img src="assets/ui/download-cv-tr.svg" alt="Download Turkish CV PDF" height="36"></picture></a>
 </p>
+
+</details>
+
+<details>
+<summary><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-preview-light.svg"><img src="assets/ui/portfolio-preview.svg" alt="Show or hide portfolio previews" width="208" height="40" align="middle"></picture></summary>
+
+<br>
 
 ### `./portfolio --preview`
 
