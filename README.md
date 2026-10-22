@@ -11,15 +11,15 @@
 
 <p align="center">
   <a href="https://ramazanyildirim.vercel.app/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/website-light.svg"><img src="assets/ui/website.svg" alt="Personal website" height="36"></picture></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-light.svg"><img src="assets/ui/cv.svg" alt="English CV PDF" height="36"></picture></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-light.svg"><img src="assets/ui/portfolio.svg" alt="Portfolio PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-light.svg"><img src="assets/ui/cv.svg" alt="Download English CV PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-light.svg"><img src="assets/ui/portfolio.svg" alt="Download portfolio PDF" height="36"></picture></a>
   <a href="https://www.linkedin.com/in/ramazanyldr/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/linkedin-light.svg"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="36"></picture></a>
   <a href="mailto:ramazanyldr0103@gmail.com"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/email-light.svg"><img src="assets/ui/email.svg" alt="Email Ramazan" height="36"></picture></a>
 </p>
 
 <a id="cv-and-portfolio"></a>
 <details>
-<summary>CV &amp; Portfolio previews</summary>
+<summary><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/document-previews-light.svg"><img src="assets/ui/document-previews.svg" alt="Show or hide CV and portfolio previews" width="240" height="40"></picture></summary>
 
 <br>
 
@@ -39,8 +39,8 @@
 </table>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-en-light.svg"><img src="assets/ui/download-cv-en.svg" alt="Open English CV PDF" height="36"></picture></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-tr-light.svg"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-en-light.svg"><img src="assets/ui/download-cv-en.svg" alt="Download English CV PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-tr-light.svg"><img src="assets/ui/download-cv-tr.svg" alt="Download Turkish CV PDF" height="36"></picture></a>
 </p>
 
 ### `./portfolio --preview`
@@ -53,7 +53,7 @@
 </table>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-portfolio-light.svg"><img src="assets/ui/download-portfolio.svg" alt="Open Portfolio PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-portfolio-light.svg"><img src="assets/ui/download-portfolio.svg" alt="Download portfolio PDF" height="36"></picture></a>
   <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-repository-light.svg"><img src="assets/ui/cv-repository.svg" alt="Open CV and Portfolio Repository" height="36"></picture></a>
 </p>
 

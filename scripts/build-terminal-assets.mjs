@@ -110,19 +110,29 @@ async function project(compact) {
   }
   return terminal('ramazan@linux: ~/projects',compact?360:900,compact?376:284,b,'dark','Dijital Diş Dünyası. Co-Founder & Developer. An integrated digital platform connecting clinics, laboratories, suppliers, patients and professionals across procurement, operations, communication and AI-assisted workflows.');
 }
-const buttons={website:['website',126],cv:['cv.pdf',116],portfolio:['portfolio',144],linkedin:['linkedin',136],email:['email',108],'visit-platform':['dijitaldisdunyasi.com',220],'download-cv-en':['cv.en.pdf',144],'download-cv-tr':['cv.tr.pdf',144],'download-portfolio':['portfolio.pdf',178],'cv-repository':['cv-repository',178]};
+const buttons={website:['website',126],cv:['download CV',140,'download'],portfolio:['download portfolio',194,'download'],linkedin:['linkedin',136],email:['email',108],'visit-platform':['dijitaldisdunyasi.com',220],'download-cv-en':['download CV --en',184,'download'],'download-cv-tr':['download CV --tr',184,'download'],'download-portfolio':['download portfolio',194,'download'],'cv-repository':['cv-repository',178]};
 await mkdir(path.join(root,'assets/terminal'),{recursive:true});
 for(const theme of ['dark','light']) for(const compact of [false,true]) await writeFile(path.join(root,`assets/brand/header-${theme}${compact?'-compact':''}.svg`),header(theme,compact));
 for(const compact of [false,true]) {
   await writeFile(path.join(root,`assets/terminal/about${compact?'-compact':''}.svg`),about(compact));
   await writeFile(path.join(root,`assets/terminal/project${compact?'-compact':''}.svg`),await project(compact));
 }
-for(const [name,[value,w]] of Object.entries(buttons)) for(const theme of ['dark','light']) {
+for(const [name,[value,w,action='open']] of Object.entries(buttons)) for(const theme of ['dark','light']) {
   const p=headerPalettes[theme],stroke=p.muted;
   let body=`<path d="M9 7H4v22h5M${w-9} 7h5v22h-5" stroke="${stroke}" fill="none"/>`;
   body+=label(16,23,value,13,p.text);
-  body+=`<path d="M${w-30} 22l8-8m-7 0h7v7" stroke="${stroke}" stroke-width="1.3" fill="none"/>`;
+  const icon=action==='download'?`M${w-26} 12v11m-4-4 4 4 4-4m-9 6v3h10v-3`:`M${w-30} 22l8-8m-7 0h7v7`;
+  body+=`<path d="${icon}" stroke="${stroke}" stroke-width="1.3" fill="none"/>`;
   await writeFile(path.join(root,`assets/ui/${name}${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="36" viewBox="0 0 ${w} 36" role="img" aria-label="${xml(value)}">${body}</svg>\n`);
+}
+for(const theme of ['dark','light']) {
+  const p=headerPalettes[theme],line=theme==='dark'?'#30363d':'#d0d7de';
+  const body=`<rect x=".5" y=".5" width="239" height="39" rx="3" fill="none" stroke="${line}"/>`
+    +label(14,25,'>_',14,p.muted)
+    +label(44,25,'CV & Portfolio',13,p.text)
+    +`<path d="M168 10v20" stroke="${line}"/>`
+    +label(180,25,'preview',10,p.muted);
+  await writeFile(path.join(root,`assets/ui/document-previews${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="240" height="40" viewBox="0 0 240 40" role="img" aria-label="Toggle CV and portfolio previews">${body}</svg>\n`);
 }
 for(const name of await readdir(path.join(root,'assets/tech-cards'))) {
   if(!name.endsWith('.svg'))continue;
