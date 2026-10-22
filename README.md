@@ -21,7 +21,7 @@
 <table align="center">
 <tr><td align="left" width="240" nowrap>
 <details>
-<summary><img src="assets/ui/cv-preview.svg" alt="Show or hide CV previews" width="208" height="40" align="middle"></summary>
+<summary><picture><img src="assets/ui/cv-preview.svg" alt="Show or hide CV previews" width="208" height="40" align="middle"></picture></summary>
 
 <div align="left">
 
@@ -55,7 +55,7 @@
 <table align="center">
 <tr><td align="left" width="240" nowrap>
 <details>
-<summary><img src="assets/ui/portfolio-preview.svg" alt="Show or hide portfolio previews" width="208" height="40" align="middle"></summary>
+<summary><picture><img src="assets/ui/portfolio-preview.svg" alt="Show or hide portfolio previews" width="208" height="40" align="middle"></picture></summary>
 
 <div align="left">
 
