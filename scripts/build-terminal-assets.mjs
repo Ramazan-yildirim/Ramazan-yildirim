@@ -49,20 +49,41 @@ function header(theme,compact) {
   }).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — RY logo</title><desc id="desc">Original RY monogram in 1,708 small white square cells, with subtle silver depth on a transparent background.</desc><defs><linearGradient id="porcelain" x1="0" y1="0" x2=".75" y2="1"><stop stop-color="#ffffff"/><stop offset=".5" stop-color="#f4f6f9"/><stop offset="1" stop-color="#e5eaf0"/></linearGradient><g id="cells">${cells}</g></defs><g transform="translate(${x.toFixed(2)} ${y.toFixed(2)})">${layers}<use href="#cells" fill="url(#porcelain)" stroke="${theme==='light'?'#8d99a8':'#d8e0e9'}" stroke-width="${theme==='light'?'.24':'.14'}"/></g></svg>\n`;
 }
-function tux(x,y,width,height) {
-  return `<svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="0 0 160 196" aria-hidden="true">
-<defs><linearGradient id="tux-coat" x2=".8" y2="1"><stop stop-color="#46515f"/><stop offset=".45" stop-color="#202a36"/><stop offset="1" stop-color="#111820"/></linearGradient><linearGradient id="tux-belly" x2=".7" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient><linearGradient id="tux-gold" x2=".7" y2="1"><stop stop-color="#ffd889"/><stop offset="1" stop-color="#d99b37"/></linearGradient></defs>
-<ellipse cx="80" cy="184" rx="62" ry="7" fill="#000000" opacity=".22"/>
-<path d="M48 83C32 93 20 119 16 145c-1 8 6 12 13 7l21-23M112 83c16 10 28 36 32 62 1 8-6 12-13 7l-21-23" fill="url(#tux-coat)" stroke="#566171" stroke-width="1.3"/>
-<path d="M47 78c-6-10-6-18-5-29C44 20 59 9 80 9s36 11 38 40c1 11 1 19-5 29 9 20 18 41 16 62-1 26-20 39-49 39s-48-13-49-39c-2-21 7-42 16-62Z" fill="url(#tux-coat)" stroke="#687484" stroke-width="1.2"/>
-<path d="M59 78c-9 14-19 35-18 55 0 23 15 37 39 37s39-14 39-37c1-20-9-41-18-55-8-9-34-9-42 0Z" fill="url(#tux-belly)"/>
-<ellipse cx="66" cy="53" rx="12" ry="19" fill="#f8fafc" transform="rotate(-8 66 53)"/><ellipse cx="94" cy="53" rx="12" ry="19" fill="#f8fafc" transform="rotate(8 94 53)"/>
-<ellipse cx="69" cy="57" rx="4.5" ry="8" fill="#111820"/><ellipse cx="91" cy="57" rx="4.5" ry="8" fill="#111820"/><circle cx="70" cy="54" r="1.7" fill="#ffffff"/><circle cx="92" cy="54" r="1.7" fill="#ffffff"/>
-<path d="M59 74c6-9 15-13 21-13s15 4 21 13c-5 8-13 15-21 15S64 82 59 74Z" fill="url(#tux-gold)" stroke="#b88639" stroke-width="1.1"/><path d="M64 75q16 8 32 0" fill="none" stroke="#ac7b32" stroke-width="1.2"/>
-<path d="m48 151-19 7c-6 1-8 6-6 11l-7 5c-4 4-2 9 4 10l33 3c11 0 17-6 17-14-1-9-12-21-22-22Z" fill="url(#tux-gold)" stroke="#b88639" stroke-width="1.3"/>
-<path d="m112 151 19 7c6 1 8 6 6 11l7 5c4 4 2 9-4 10l-33 3c-11 0-17-6-17-14 1-9 12-21 22-22Z" fill="url(#tux-gold)" stroke="#b88639" stroke-width="1.3"/>
-<path d="m28 168 9 7m2-13 9 10m84-4-9 7m-2-13-9 10" stroke="#bd8c3f" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-</svg>`;
+// Character-only Tux: preserve spaces and disable ligatures to retain its terminal grid.
+const tuxRows=[
+  "          _nnnn_",
+  "         dGGGGMMb",
+  "        @p~qp~~qMb",
+  "        M|@||@) M|",
+  "        @,----.JM|",
+  "       JS^\\__/  qKL",
+  "      dZP        qKRb",
+  "     dZP          qKKb",
+  "    fZP            SMMb",
+  "    HZM            MMMM",
+  "    FqM            MMMM",
+  "  __| \".        |\\dS\"qML",
+  "  |    `.       | `' \\Zq",
+  " _)      \\.___.,|     .'",
+  " \\____   )MMMMMM|   .'",
+  "      `-'       `--'"
+];
+function tux(x,y,size=14,lineHeight=14) {
+  const rows=tuxRows.map((line,i)=>{
+    let content=xml(line);
+    if(i===4||i===5) {
+      content=xml(line.slice(0,9))+`<tspan class="amber">${xml(line.slice(9,14))}</tspan>`+xml(line.slice(14));
+    }
+    return `<text x="${x}" y="${y+i*lineHeight}" font-size="${size}" class="${i>=12?'amber':'text'}">${content}</text>`;
+  }).join('');
+  return `<g aria-hidden="true" xml:space="preserve" style="font-variant-ligatures:none">${rows}</g>`;
+}
+function ansiStrip(x,y,cell=18) {
+  return ['#30363d','#d88c9a','#8bd49c','#e5c07b','#91b9ed','#b6a2de','#83d6e8','#e6edf3'].map((fill,i)=>`<rect x="${x+i*cell}" y="${y}" width="${cell}" height="7" fill="${fill}"/>`).join('');
+}
+function aboutPrompt(y,compact=false,command='') {
+  const size=compact?11:12;
+  return txt(24,y,'ramazan@linux',size,'green')+txt(compact?116:125,y,'~',size,'cyan')+txt(compact?132:143,y,`$ ${command}`,size);
 }
 const aboutFields=[
   ['education','Computer Engineering | Final Year'],
@@ -74,28 +95,36 @@ const aboutFields=[
 ];
 function about(compact) {
   const w=compact?360:900;
-  let b=txt(24,66,'$ whoami',compact?12:14,'green');
-  if(!compact) {
-    b+=tux(51,91,152,186);
-    ['green','cyan','amber','text'].forEach((color,i)=>b+=`<rect x="${65+i*30}" y="285" width="27" height="8" class="${color}"/>`);
-  } else b+=tux(273,79,58,71);
-  const x=compact?24:260;
-  b+=txt(x,compact?100:104,'ramazan@linux',compact?19:21,'cyan','font-weight="700"');
-  b+=txt(x,compact?122:129,'-------------',14,'muted');
+  const description='Linux terminal profile with a character-art Tux penguin. '+aboutFields.map(([key,val])=>`${key}: ${val}`).join('. ');
+  let b=aboutPrompt(67,compact,'whoami');
   if(compact) {
-    let y=159;
+    b+=tux(21,97,9,9.5);
+    b+=txt(174,125,'Ramazan',19,'text','font-weight="700"')+txt(174,150,'Yıldırım',19,'text','font-weight="700"');
+    b+=txt(174,176,'ramazan@linux',11,'cyan')+txt(174,196,'~/profile',11,'muted');
+    b+=ansiStrip(174,218,18);
+    b+=`<path d="M24 257h312" class="rule"/>`;
+    let y=282;
     aboutFields.forEach(([key,val,lines=[val]])=>{
-      b+=txt(x,y,`${key}:`,11,'green');
-      lines.forEach((line,i)=>b+=txt(x,y+19+i*18,line,12));
-      y+=44+(lines.length-1)*18;
+      b+=txt(24,y,`${key}:`,11,'green');
+      lines.forEach((line,i)=>b+=txt(24,y+19+i*18,line,12));
+      y+=45+(lines.length-1)*18;
     });
-    b+=`<path d="M24 ${y-4}h312" class="rule"/>`+txt(24,y+21,'$ ',13,'green')+cursor(42,y+21);
-    return terminal('ramazan@linux: ~',w,y+42,b,'dark',aboutFields.map(([key,val])=>`${key}: ${val}`).join('. '));
-  } else {
-    aboutFields.forEach(([key,val],i)=>{b+=txt(x,156+i*25,`${key}:`,13,'green')+txt(x+114,156+i*25,val,13);});
-    b+=`<path d="M24 301h852" class="rule"/>`+txt(24,326,'$ ',13,'green')+cursor(42,326);
+    b+=`<path d="M24 ${y-3}h312" class="rule"/>`+aboutPrompt(y+22,true)+cursor(146,y+22);
+    return terminal('~/profile — bash',w,y+43,b,'dark',description);
   }
-  return terminal('ramazan@linux: ~',w,348,b,'dark',aboutFields.map(([key,val])=>`${key}: ${val}`).join('. '));
+  b+=tux(37,123,14,14);
+  b+=txt(149,369,'[ linux / tux ]',11,'muted','text-anchor="middle"');
+  b+=`<path d="M287 102v253" class="rule"/>`;
+  b+=txt(318,126,'Ramazan Yıldırım',23,'text','font-weight="700"');
+  b+=txt(318,151,'ramazan@linux',13,'cyan')+txt(450,151,'~/profile',12,'muted');
+  b+=`<path d="M318 173h558" class="rule"/>`;
+  aboutFields.forEach(([key,val],i)=>{
+    const y=201+i*26;
+    b+=txt(318,y,`${key}:`,12,'green')+txt(432,y,val,13);
+  });
+  b+=ansiStrip(318,357);
+  b+=`<path d="M24 385h852" class="rule"/>`+aboutPrompt(412)+cursor(158,412);
+  return terminal('~/profile — bash',w,436,b,'dark',description);
 }
 async function project(compact) {
   const original=await readFile(path.join(root,'assets/dijital-dis-dunyasi/logo.svg'),'utf8');
