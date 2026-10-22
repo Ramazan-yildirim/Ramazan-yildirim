@@ -127,8 +127,7 @@ for(const [name,[value,w,action='open']] of Object.entries(buttons)) for(const t
 }
 for(const [name,title] of [['cv','CV'],['portfolio','Portfolio']]) for(const theme of ['dark','light']) {
   const p=headerPalettes[theme],line=theme==='dark'?'#30363d':'#d0d7de';
-  const body=`<rect x=".5" y=".5" width="207" height="39" rx="3" fill="none" stroke="${line}"/>`
-    +label(16,25,title,13,p.text)
+  const body=label(16,25,title,13,p.text)
     +`<path d="M136 10v20" stroke="${line}"/>`
     +label(148,25,'preview',10,p.muted);
   await writeFile(path.join(root,`assets/ui/${name}-preview${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="208" height="40" viewBox="0 0 208 40" role="img" aria-label="Toggle ${xml(title)} previews">${body}</svg>\n`);

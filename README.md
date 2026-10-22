@@ -18,12 +18,16 @@
 </p>
 
 <a id="cv-and-portfolio"></a>
+<table align="center">
+<tr><td align="center" width="240">
 <details>
-<summary><div align="center"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-preview-light.svg"><img src="assets/ui/cv-preview.svg" alt="Show or hide CV previews" width="208" height="40" align="middle"></picture></div></summary>
+<summary><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-preview-light.svg"><img src="assets/ui/cv-preview.svg" alt="Show or hide CV previews" width="208" height="40" align="middle"></picture></summary>
+
+<div align="left">
 
 <br>
 
-### `./cv --list`
+<h3><code>./cv --list</code></h3>
 
 <table>
   <tr>
@@ -43,14 +47,21 @@
   <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-tr-light.svg"><img src="assets/ui/download-cv-tr.svg" alt="Download Turkish CV PDF" height="36"></picture></a>
 </p>
 
+</div>
 </details>
+</td></tr>
+</table>
 
+<table align="center">
+<tr><td align="center" width="240">
 <details>
-<summary><div align="center"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-preview-light.svg"><img src="assets/ui/portfolio-preview.svg" alt="Show or hide portfolio previews" width="208" height="40" align="middle"></picture></div></summary>
+<summary><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-preview-light.svg"><img src="assets/ui/portfolio-preview.svg" alt="Show or hide portfolio previews" width="208" height="40" align="middle"></picture></summary>
+
+<div align="left">
 
 <br>
 
-### `./portfolio --preview`
+<h3><code>./portfolio --preview</code></h3>
 
 <table>
   <tr>
@@ -64,7 +75,10 @@
   <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-repository-light.svg"><img src="assets/ui/cv-repository.svg" alt="Open CV and Portfolio Repository" height="36"></picture></a>
 </p>
 
+</div>
 </details>
+</td></tr>
+</table>
 
 
 ## `$ whoami`
