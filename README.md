@@ -19,7 +19,7 @@
 
 <a id="cv-and-portfolio"></a>
 <details>
-<summary><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-preview-light.svg"><img src="assets/ui/cv-preview.svg" alt="Show or hide CV previews" width="208" height="40" align="middle"></picture></summary>
+<summary><div align="center"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-preview-light.svg"><img src="assets/ui/cv-preview.svg" alt="Show or hide CV previews" width="208" height="40" align="middle"></picture></div></summary>
 
 <br>
 
@@ -46,7 +46,7 @@
 </details>
 
 <details>
-<summary><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-preview-light.svg"><img src="assets/ui/portfolio-preview.svg" alt="Show or hide portfolio previews" width="208" height="40" align="middle"></picture></summary>
+<summary><div align="center"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-preview-light.svg"><img src="assets/ui/portfolio-preview.svg" alt="Show or hide portfolio previews" width="208" height="40" align="middle"></picture></div></summary>
 
 <br>
 
