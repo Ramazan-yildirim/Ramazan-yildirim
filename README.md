@@ -4,17 +4,17 @@
       <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brand/header-dark-compact.svg">
       <source media="(max-width: 600px)" srcset="assets/brand/header-light-compact.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/brand/header-light.svg">
-      <img src="assets/brand/header-dark.svg" alt="Ramazan Yıldırım RY logo" width="900">
+      <img src="assets/brand/header-dark.svg" alt="Ramazan Yıldırım — RY terminal logo. Deep Learning / Computer Vision / Turkish NLP." width="900">
     </picture>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://ramazanyildirim.vercel.app/"><img src="assets/ui/website.svg" alt="Personal website" height="42"></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/cv.svg" alt="English CV PDF" height="42"></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/portfolio.svg" alt="Portfolio PDF" height="42"></a>
-  <a href="https://www.linkedin.com/in/ramazanyldr/"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="42"></a>
-  <a href="mailto:ramazanyldr0103@gmail.com"><img src="assets/ui/email.svg" alt="Email Ramazan" height="42"></a>
+  <a href="https://ramazanyildirim.vercel.app/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/website-light.svg"><img src="assets/ui/website.svg" alt="Personal website" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-light.svg"><img src="assets/ui/cv.svg" alt="English CV PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-light.svg"><img src="assets/ui/portfolio.svg" alt="Portfolio PDF" height="36"></picture></a>
+  <a href="https://www.linkedin.com/in/ramazanyldr/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/linkedin-light.svg"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="36"></picture></a>
+  <a href="mailto:ramazanyldr0103@gmail.com"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/email-light.svg"><img src="assets/ui/email.svg" alt="Email Ramazan" height="36"></picture></a>
 </p>
 
 <a id="cv-and-portfolio"></a>
@@ -39,8 +39,8 @@
 </table>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><img src="assets/ui/download-cv-en.svg" alt="Open English CV PDF" height="44"></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="44"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-en-light.svg"><img src="assets/ui/download-cv-en.svg" alt="Open English CV PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-cv-tr-light.svg"><img src="assets/ui/download-cv-tr.svg" alt="Open Turkish CV PDF" height="36"></picture></a>
 </p>
 
 ### `./portfolio --preview`
@@ -53,8 +53,8 @@
 </table>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><img src="assets/ui/download-portfolio.svg" alt="Open Portfolio PDF" height="44"></a>
-  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><img src="assets/ui/cv-repository.svg" alt="Open CV and Portfolio Repository" height="44"></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/download-portfolio-light.svg"><img src="assets/ui/download-portfolio.svg" alt="Open Portfolio PDF" height="36"></picture></a>
+  <a href="https://github.com/Ramazan-yildirim/CV_Portfolio"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-repository-light.svg"><img src="assets/ui/cv-repository.svg" alt="Open CV and Portfolio Repository" height="36"></picture></a>
 </p>
 
 </details>
@@ -81,7 +81,7 @@
 </p>
 
 <p align="center">
-  <a href="https://dijitaldisdunyasi.com"><img src="assets/ui/visit-platform.svg" alt="Visit Dijital Diş Dünyası" height="44"></a>
+  <a href="https://dijitaldisdunyasi.com"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/visit-platform-light.svg"><img src="assets/ui/visit-platform.svg" alt="Visit Dijital Diş Dünyası" height="36"></picture></a>
 </p>
 
 

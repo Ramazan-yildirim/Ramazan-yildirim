@@ -27,15 +27,49 @@ ${body}</svg>\n`;
 // A finer luminance sample of the original RY mark, kept as data to avoid dependencies.
 const logoRows=JSON.parse(await readFile(new URL('./ry-grid.json',import.meta.url),'utf8'));
 const cursor=(x,y)=>`<rect x="${x}" y="${y-12}" width="8" height="15" class="green"/>`;
-function header(theme,compact) {
-  const w=compact?360:900,h=compact?302:374,step=compact?3.1:4,depth=compact?6:8;
-  const x=(w-logoRows[0].length*step-depth)/2,y=(h-logoRows.length*step+depth)/2;
-  const cells=logoRows.flatMap((row,r)=>[...row].map((c,col)=>c==='#'?`<rect x="${(col*step).toFixed(2)}" y="${(r*step).toFixed(2)}" width="${(step*.79).toFixed(2)}" height="${(step*.79).toFixed(2)}" rx=".15"/>`:'')).join('');
-  const layers=Array.from({length:depth},(_,i)=>{
-    const d=depth-i,shade=Math.round(83+(1-d/depth)*76);
-    return `<use href="#cells" transform="translate(${d} ${-d})" fill="rgb(${shade},${shade+8},${shade+17})"/>`;
+const headerPalettes = {
+  dark: {bg:'#0d1117',text:'#e6edf3',muted:'#9ba8b7',line:'#30363d',accent:'#8bd49c',primary:'#14241b'},
+  light: {bg:'#ffffff',text:'#24292f',muted:'#57606a',line:'#d0d7de',accent:'#216e39',primary:'#edf7ef'},
+};
+function label(x,y,value,size,fill,extra='') {
+  return `<text x="${x}" y="${y}" fill="${fill}" font-family="Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="${size}" ${extra}>${xml(value)}</text>`;
+}
+function blockMark(x,y,fill,compact) {
+  // Each terminal glyph represents two vertical samples of the original RY mark.
+  const cols=44,pixels=30,size=compact?8.5:10,advance=size*.6,line=size*1.2;
+  const on=(col,row)=>{
+    let filled=0,total=0;
+    const x0=Math.floor(col*logoRows[0].length/cols),x1=Math.floor((col+1)*logoRows[0].length/cols);
+    const y0=Math.floor(row*logoRows.length/pixels),y1=Math.floor((row+1)*logoRows.length/pixels);
+    for(let yy=y0;yy<y1;yy++)for(let xx=x0;xx<x1;xx++){total++;if(logoRows[yy][xx]==='#')filled++;}
+    return filled/total>=.5;
+  };
+  return Array.from({length:pixels/2},(_,row)=>{
+    const cells=Array.from({length:cols},(_,col)=>[' ','▄','▀','█'][(on(col,row*2)?2:0)+(on(col,row*2+1)?1:0)]).join('');
+    return label(x,y+row*line,cells,size,fill,`xml:space="preserve" textLength="${cols*advance}" lengthAdjust="spacingAndGlyphs"`);
   }).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Ramazan Yıldırım RY logo"><desc>White RY logo made from small square cells with shaded three-dimensional depth.</desc><defs><linearGradient id="porcelain" x1="0" y1="0" x2=".75" y2="1"><stop stop-color="#ffffff"/><stop offset=".5" stop-color="#f4f6f9"/><stop offset="1" stop-color="#e5eaf0"/></linearGradient><g id="cells">${cells}</g></defs><g transform="translate(${x.toFixed(2)} ${y.toFixed(2)})">${layers}<use href="#cells" fill="url(#porcelain)" stroke="${theme==='light'?'#a4afbd':'#d8e0e9'}" stroke-width=".18"/></g></svg>\n`;
+}
+function header(theme,compact) {
+  const p=headerPalettes[theme],w=compact?360:900,h=compact?314:256;
+  let body=`<rect width="${w}" height="${h}" fill="${p.bg}"/>`;
+  body+=label(24,27,'ramazan@linux',11,p.accent)+label(compact?128:132,27,': ~',11,p.muted);
+  body+=label(w-24,27,'~/profile',11,p.muted,'text-anchor="end"');
+  body+=`<path d="M24 42.5H${w-24}" stroke="${p.line}"/>`;
+  if(compact) {
+    body+=blockMark(68,65,p.text,true);
+    body+=label(24,230,'Ramazan Yıldırım',23,p.text,'font-weight="700"');
+    body+=label(24,257,'Deep Learning / Computer Vision',12,p.muted);
+    body+=label(24,277,'Turkish NLP',12,p.muted);
+    body+=label(24,305,'$ ls ~/links',11,p.accent);
+  } else {
+    body+=blockMark(38,69,p.text,false);
+    body+=label(370,99,'Ramazan Yıldırım',30,p.text,'font-weight="700"');
+    body+=label(370,136,'Deep Learning / Computer Vision',16,p.muted);
+    body+=label(370,162,'Turkish NLP',16,p.muted);
+    body+=label(370,202,'$ ./build --ideas-to-reality',12,p.accent);
+    body+=label(24,247,'$ ls ~/links',12,p.accent);
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — terminal profile</title><desc id="desc">RY logo drawn with terminal block characters. Deep Learning / Computer Vision / Turkish NLP.</desc>${body}</svg>\n`;
 }
 function tux(x,y,width,height) {
   return `<svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="0 0 160 196" aria-hidden="true">
@@ -98,17 +132,20 @@ async function project(compact) {
   }
   return terminal('ramazan@linux: ~/projects',compact?360:900,compact?376:284,b,'dark','Dijital Diş Dünyası. Co-Founder & Developer. An integrated digital platform connecting clinics, laboratories, suppliers, patients and professionals across procurement, operations, communication and AI-assisted workflows.');
 }
-const buttons={website:['./website',160],cv:['./cv --en',160],portfolio:['./portfolio',182],linkedin:['./linkedin',172],email:['./mail',138],'visit-platform':['./open dijitaldisdunyasi.com',330],'download-cv-en':['./download cv --en',244],'download-cv-tr':['./download cv --tr',244],'download-portfolio':['./download portfolio',270],'cv-repository':['./open cv-repository',270]};
+const buttons={website:['website',126,true],cv:['cv.pdf',116],portfolio:['portfolio',144],linkedin:['linkedin',136],email:['email',108],'visit-platform':['dijitaldisdunyasi.com',220],'download-cv-en':['cv.en.pdf',144],'download-cv-tr':['cv.tr.pdf',144],'download-portfolio':['portfolio.pdf',178],'cv-repository':['cv-repository',178]};
 await mkdir(path.join(root,'assets/terminal'),{recursive:true});
 for(const theme of ['dark','light']) for(const compact of [false,true]) await writeFile(path.join(root,`assets/brand/header-${theme}${compact?'-compact':''}.svg`),header(theme,compact));
 for(const compact of [false,true]) {
   await writeFile(path.join(root,`assets/terminal/about${compact?'-compact':''}.svg`),about(compact));
   await writeFile(path.join(root,`assets/terminal/project${compact?'-compact':''}.svg`),await project(compact));
 }
-for(const [name,[label,w]] of Object.entries(buttons)) {
-  const p=palettes.dark;
-  const body=`<rect x=".5" y=".5" width="${w-1}" height="43" rx="3" fill="${p.bg}" stroke="${p.line}"/><text x="14" y="27" fill="${p.green}" font-family="Consolas,'Liberation Mono',monospace" font-size="14">$</text><text x="34" y="27" fill="${p.text}" font-family="Consolas,'Liberation Mono',monospace" font-size="13">${xml(label)}</text><path d="M${w-23}18l5 4-5 4" fill="none" stroke="${p.green}" stroke-width="1.5"/>`;
-  await writeFile(path.join(root,`assets/ui/${name}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="44" viewBox="0 0 ${w} 44" role="img" aria-label="${xml(label)}">${body}</svg>\n`);
+for(const [name,[value,w,primary=false]] of Object.entries(buttons)) for(const theme of ['dark','light']) {
+  const p=headerPalettes[theme],stroke=primary?p.accent:p.muted;
+  let body=primary?`<rect x=".5" y=".5" width="${w-1}" height="35" fill="${p.primary}"/>`:'';
+  body+=`<path d="M9 7H4v22h5M${w-9} 7h5v22h-5" stroke="${stroke}" fill="none"/>`;
+  body+=label(16,23,value,13,primary?p.accent:p.text);
+  body+=`<path d="M${w-30} 22l8-8m-7 0h7v7" stroke="${stroke}" stroke-width="1.3" fill="none"/>`;
+  await writeFile(path.join(root,`assets/ui/${name}${theme==='light'?'-light':''}.svg`),`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="36" viewBox="0 0 ${w} 36" role="img" aria-label="${xml(value)}">${body}</svg>\n`);
 }
 for(const name of await readdir(path.join(root,'assets/tech-cards'))) {
   if(!name.endsWith('.svg'))continue;
