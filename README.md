@@ -50,6 +50,7 @@
 </div>
 </details>
 </td>
+<td width="24" aria-hidden="true">&nbsp;</td>
 <td align="left" valign="top" width="240" height="40" nowrap>
 <details>
 <summary><samp>Portfolio&nbsp;&nbsp;│&nbsp;preview</samp></summary>
