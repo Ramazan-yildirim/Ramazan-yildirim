@@ -24,7 +24,7 @@ function terminal(title,width,height,body,theme='dark',description=title) {
 ${txt(width/2,23,title,width===360?10:12,'muted','text-anchor="middle"')}
 ${body}</svg>\n`;
 }
-// Custom upright RY lettering on a terminal-cell grid. The original mark is in assets/brand/ry.svg.
+// Original 88 x 58 luminance sample of the user's RY mark. Preserve this silhouette.
 const logoRows=JSON.parse(await readFile(new URL('./ry-grid.json',import.meta.url),'utf8'));
 const cursor=(x,y)=>`<rect x="${x}" y="${y-12}" width="8" height="15" class="green"/>`;
 const headerPalettes = {
@@ -34,22 +34,20 @@ const headerPalettes = {
 function label(x,y,value,size,fill,extra='') {
   return `<text x="${x}" y="${y}" fill="${fill}" font-family="Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="${size}" ${extra}>${xml(value)}</text>`;
 }
-function terminalMark(x,y,cell,fill) {
-  // Merge occupied cells into one vector path so the block geometry is font-independent.
-  const runs=[];
-  logoRows.forEach((row,y)=>{
-    for(const match of row.matchAll(/#+/g)) {
-      const x=match.index,width=match[0].length;
-      runs.push(`M${x} ${y}h${width}v1h-${width}Z`);
-    }
-  });
-  return `<path transform="translate(${x} ${y}) scale(${cell})" d="${runs.join('')}" fill="${fill}"/>`;
-}
 function header(theme,compact) {
-  const p=headerPalettes[theme],w=compact?360:900,h=compact?196:244,cell=compact?5.4:7;
-  const markWidth=logoRows[0].length*cell,markHeight=logoRows.length*cell;
-  const body=terminalMark((w-markWidth)/2,(h-markHeight)/2,cell,p.text);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — RY logo</title><desc id="desc">Upright RY initials in custom terminal block lettering, centered on a transparent background.</desc>${body}</svg>\n`;
+  const w=compact?360:900,h=compact?236:304,step=compact?3:4,depth=compact?3:4;
+  const cellSize=step*.82;
+  const points=logoRows.flatMap((row,y)=>[...row].flatMap((c,x)=>c==='#'?[[x,y]]:[]));
+  const minX=Math.min(...points.map(([x])=>x)),maxX=Math.max(...points.map(([x])=>x));
+  const minY=Math.min(...points.map(([,y])=>y)),maxY=Math.max(...points.map(([,y])=>y));
+  const markWidth=(maxX-minX)*step+cellSize+depth,markHeight=(maxY-minY)*step+cellSize+depth;
+  const x=(w-markWidth)/2-minX*step,y=(h-markHeight)/2-minY*step+depth;
+  const cells=points.map(([col,row])=>`<rect x="${(col*step).toFixed(2)}" y="${(row*step).toFixed(2)}" width="${cellSize.toFixed(2)}" height="${cellSize.toFixed(2)}" rx=".12"/>`).join('');
+  const layers=Array.from({length:depth},(_,i)=>{
+    const offset=depth-i,shade=Math.round(101+i/(depth-1)*58);
+    return `<use href="#cells" transform="translate(${offset} ${-offset})" fill="rgb(${shade},${shade+9},${shade+19})"/>`;
+  }).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — RY logo</title><desc id="desc">Original RY monogram in 1,708 small white square cells, with subtle silver depth on a transparent background.</desc><defs><linearGradient id="porcelain" x1="0" y1="0" x2=".75" y2="1"><stop stop-color="#ffffff"/><stop offset=".5" stop-color="#f4f6f9"/><stop offset="1" stop-color="#e5eaf0"/></linearGradient><g id="cells">${cells}</g></defs><g transform="translate(${x.toFixed(2)} ${y.toFixed(2)})">${layers}<use href="#cells" fill="url(#porcelain)" stroke="${theme==='light'?'#8d99a8':'#d8e0e9'}" stroke-width="${theme==='light'?'.24':'.14'}"/></g></svg>\n`;
 }
 function tux(x,y,width,height) {
   return `<svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="0 0 160 196" aria-hidden="true">
