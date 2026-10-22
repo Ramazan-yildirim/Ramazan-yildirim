@@ -19,9 +19,9 @@
 
 <a id="cv-and-portfolio"></a>
 <table align="center">
-<tr><td align="left" width="240" nowrap>
+<tr><td align="left" valign="middle" width="240" height="40" nowrap>
 <details>
-<summary><a><img src="assets/ui/cv-preview.svg" alt="Show or hide CV previews" width="208" height="40" align="middle"></a></summary>
+<summary><samp>CV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;preview</samp></summary>
 
 <div align="left">
 
@@ -53,9 +53,9 @@
 </table>
 
 <table align="center">
-<tr><td align="left" width="240" nowrap>
+<tr><td align="left" valign="middle" width="240" height="40" nowrap>
 <details>
-<summary><a><img src="assets/ui/portfolio-preview.svg" alt="Show or hide portfolio previews" width="208" height="40" align="middle"></a></summary>
+<summary><samp>Portfolio&nbsp;&nbsp;│&nbsp;preview</samp></summary>
 
 <div align="left">
 
