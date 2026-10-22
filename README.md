@@ -19,7 +19,7 @@
 
 <a id="cv-and-portfolio"></a>
 <table align="center">
-<tr><td align="left" valign="top" width="240" height="40" nowrap>
+<tr><td align="left" valign="middle" width="240" height="40" nowrap>
 <details>
 <summary><samp>CV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;preview</samp></summary>
 
@@ -49,9 +49,11 @@
 
 </div>
 </details>
-</td>
-<td width="24">&nbsp;</td>
-<td align="left" valign="top" width="240" height="40" nowrap>
+</td></tr>
+</table>
+
+<table align="center">
+<tr><td align="left" valign="middle" width="240" height="40" nowrap>
 <details>
 <summary><samp>Portfolio&nbsp;&nbsp;│&nbsp;preview</samp></summary>
 
