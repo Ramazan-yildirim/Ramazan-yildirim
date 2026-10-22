@@ -28,32 +28,53 @@ ${body}</svg>\n`;
 const logoRows=JSON.parse(await readFile(new URL('./ry-grid.json',import.meta.url),'utf8'));
 const cursor=(x,y)=>`<rect x="${x}" y="${y-12}" width="8" height="15" class="green"/>`;
 const headerPalettes = {
-  dark: {text:'#e6edf3',muted:'#9ba8b7'},
-  light: {text:'#24292f',muted:'#57606a'},
+  dark: {text:'#e6edf3',muted:'#9ba8b7',logo:{highlight:'#f1f7f3',face:'#d8e5dd',mid:'#aac6b4',edge:'#6eaa83',shadow:'#355541'}},
+  light: {text:'#24292f',muted:'#57606a',logo:{highlight:'#203c2b',face:'#34533f',mid:'#496f55',edge:'#618d6d',shadow:'#b3cdbb'}},
 };
 function label(x,y,value,size,fill,extra='') {
   return `<text x="${x}" y="${y}" fill="${fill}" font-family="Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="${size}" ${extra}>${xml(value)}</text>`;
 }
-function blockMark(x,y,fill,compact) {
-  // Each terminal glyph represents two vertical samples of the original RY mark.
-  const cols=44,pixels=30,size=compact?8.5:10,advance=size*.6,line=size*1.2;
-  const on=(col,row)=>{
-    let filled=0,total=0;
-    const x0=Math.floor(col*logoRows[0].length/cols),x1=Math.floor((col+1)*logoRows[0].length/cols);
-    const y0=Math.floor(row*logoRows.length/pixels),y1=Math.floor((row+1)*logoRows.length/pixels);
-    for(let yy=y0;yy<y1;yy++)for(let xx=x0;xx<x1;xx++){total++;if(logoRows[yy][xx]==='#')filled++;}
-    return filled/total>=.5;
-  };
-  return Array.from({length:pixels/2},(_,row)=>{
-    const cells=Array.from({length:cols},(_,col)=>[' ','▄','▀','█'][(on(col,row*2)?2:0)+(on(col,row*2+1)?1:0)]).join('');
-    return label(x,y+row*line,cells,size,fill,`xml:space="preserve" textLength="${cols*advance}" lengthAdjust="spacingAndGlyphs"`);
-  }).join('');
+function ansiMark(x,y,colors,compact) {
+  // Keep all 88 x 58 source samples; each glyph holds two vertical samples.
+  const cols=logoRows[0].length+2,pixels=logoRows.length+2;
+  const size=compact?5.8:7.2,advance=size*.6,line=size*1.2;
+  const on=(col,row)=>logoRows[row]?.[col]==='#';
+  let body='';
+  for(let row=0;row<pixels/2;row++) {
+    const runs=[];
+    for(let col=0;col<cols;col++) {
+      const top=on(col,row*2),bottom=on(col,row*2+1);
+      let glyph=[' ','▄','▀','█'][(top?2:0)+(bottom?1:0)];
+      let color=colors.face;
+      if(top||bottom) {
+        const topEdge=!on(col,row*2-1)||!on(col-1,row*2);
+        const lowerEdge=!on(col,row*2+2)||!on(col+1,row*2+1);
+        if(topEdge) color=colors.highlight;
+        else if(lowerEdge) {
+          color=colors.edge;
+          if(top&&bottom) glyph='▓';
+        } else {
+          color=row<10?colors.face:colors.mid;
+          if(top&&bottom&&row>=10)glyph='▓';
+        }
+      } else if(on(col-2,row*2-2)||on(col-2,row*2-1)) {
+        glyph='░';
+        color=colors.shadow;
+      }
+      const previous=runs.at(-1);
+      if(previous?.color===color)previous.value+=glyph;
+      else runs.push({color,value:glyph});
+    }
+    body+=`<text x="0" y="${row*line}" xml:space="preserve" textLength="${cols*advance}" lengthAdjust="spacingAndGlyphs">${runs.map(run=>`<tspan fill="${run.color}">${xml(run.value)}</tspan>`).join('')}</text>`;
+  }
+  return `<g transform="translate(${x} ${y})" font-family="Consolas,'Liberation Mono','DejaVu Sans Mono',monospace" font-size="${size}">${body}</g>`;
 }
 function header(theme,compact) {
-  const p=headerPalettes[theme],w=compact?360:900,h=compact?200:232;
-  const markWidth=44*(compact?8.5:10)*.6;
-  const body=blockMark((w-markWidth)/2,compact?32:38,p.text,compact);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — RY logo</title><desc id="desc">Centered RY logo drawn with terminal block characters on a transparent background.</desc>${body}</svg>\n`;
+  const p=headerPalettes[theme],w=compact?360:900,h=compact?248:304;
+  const size=compact?5.8:7.2,advance=size*.6;
+  const markWidth=(logoRows[0].length+2)*advance,markHeight=(logoRows.length+2)*advance;
+  const body=ansiMark((w-markWidth)/2,(h-markHeight)/2+size,p.logo,compact);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — RY logo</title><desc id="desc">Centered RY monogram with fine ANSI block lettering, shaded edges and a green stippled offset on a transparent background.</desc>${body}</svg>\n`;
 }
 function tux(x,y,width,height) {
   return `<svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="0 0 160 196" aria-hidden="true">
