@@ -51,30 +51,21 @@ function header(theme,compact) {
 }
 // Character-only Tux: preserve spaces and disable ligatures to retain its terminal grid.
 const tuxRows=[
-  "          _nnnn_",
-  "         dGGGGMMb",
-  "        @p~qp~~qMb",
-  "        M|@||@) M|",
-  "        @,----.JM|",
-  "       JS^\\__/  qKL",
-  "      dZP        qKRb",
-  "     dZP          qKKb",
-  "    fZP            SMMb",
-  "    HZM            MMMM",
-  "    FqM            MMMM",
-  "  __| \".        |\\dS\"qML",
-  "  |    `.       | `' \\Zq",
-  " _)      \\.___.,|     .'",
-  " \\____   )MMMMMM|   .'",
-  "      `-'       `--'"
+  "    .--.",
+  "   |o_o |",
+  "   |:_/ |",
+  '  //   \\ \\',
+  " (|     | )",
+  "/'\\_   _/`\\",
+  "\\___)=(___/"
 ];
-function tux(x,y,size=14,lineHeight=14) {
+function tux(x,y,size,lineHeight) {
   const rows=tuxRows.map((line,i)=>{
     let content=xml(line);
-    if(i===4||i===5) {
-      content=xml(line.slice(0,9))+`<tspan class="amber">${xml(line.slice(9,14))}</tspan>`+xml(line.slice(14));
+    if(i===1||i===2) {
+      content=xml(line.slice(0,4))+`<tspan class="${i===1?'cyan':'amber'}">${xml(line.slice(4,7))}</tspan>`+xml(line.slice(7));
     }
-    return `<text x="${x}" y="${y+i*lineHeight}" font-size="${size}" class="${i>=12?'amber':'text'}">${content}</text>`;
+    return `<text x="${x}" y="${y+i*lineHeight}" font-size="${size}" class="${i>=5?'amber':'text'}">${content}</text>`;
   }).join('');
   return `<g aria-hidden="true" xml:space="preserve" style="font-variant-ligatures:none">${rows}</g>`;
 }
@@ -98,7 +89,7 @@ function about(compact) {
   const description='Linux terminal profile with a character-art Tux penguin. '+aboutFields.map(([key,val])=>`${key}: ${val}`).join('. ');
   let b=aboutPrompt(67,compact,'whoami');
   if(compact) {
-    b+=tux(21,97,9,9.5);
+    b+=tux(39,113,17,18.5);
     b+=txt(174,125,'Ramazan',19,'text','font-weight="700"')+txt(174,150,'Yıldırım',19,'text','font-weight="700"');
     b+=txt(174,176,'ramazan@linux',11,'cyan')+txt(174,196,'~/profile',11,'muted');
     b+=ansiStrip(174,218,18);
@@ -112,7 +103,7 @@ function about(compact) {
     b+=`<path d="M24 ${y-3}h312" class="rule"/>`+aboutPrompt(y+22,true)+cursor(146,y+22);
     return terminal('~/profile — bash',w,y+43,b,'dark',description);
   }
-  b+=tux(37,123,14,14);
+  b+=tux(61,145,26,28);
   b+=txt(149,369,'[ linux / tux ]',11,'muted','text-anchor="middle"');
   b+=`<path d="M287 102v253" class="rule"/>`;
   b+=txt(318,126,'Ramazan Yıldırım',23,'text','font-weight="700"');
