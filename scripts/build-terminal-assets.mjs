@@ -49,25 +49,38 @@ function header(theme,compact) {
   }).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">Ramazan Yıldırım — RY logo</title><desc id="desc">Original RY monogram in 1,708 small white square cells, with subtle silver depth on a transparent background.</desc><defs><linearGradient id="porcelain" x1="0" y1="0" x2=".75" y2="1"><stop stop-color="#ffffff"/><stop offset=".5" stop-color="#f4f6f9"/><stop offset="1" stop-color="#e5eaf0"/></linearGradient><g id="cells">${cells}</g></defs><g transform="translate(${x.toFixed(2)} ${y.toFixed(2)})">${layers}<use href="#cells" fill="url(#porcelain)" stroke="${theme==='light'?'#8d99a8':'#d8e0e9'}" stroke-width="${theme==='light'?'.24':'.14'}"/></g></svg>\n`;
 }
-// Character-only Tux: preserve spaces and disable ligatures to retain its terminal grid.
+// ANSI-style Tux. Each occupied cell is a full-block terminal character;
+// explicit run positions keep the silhouette aligned across monospace fonts.
 const tuxRows=[
-  "    .--.",
-  "   |o_o |",
-  "   |:_/ |",
-  '  //   \\ \\',
-  " (|     | )",
-  "/'\\_   _/`\\",
-  "\\___)=(___/"
+  '          KKKKKK          ',
+  '        KKKKKKKKKK        ',
+  '       KKWWWKKWWWKK       ',
+  '       KKWPWKKWPWKK       ',
+  '       KKWWWKKWWWKK       ',
+  '       KKYYYYYYYYKK       ',
+  '       KKKYYYYYYKKK       ',
+  '      KKKWWWWWWWWKKK      ',
+  '     KKKWWWWWWWWWWKKK     ',
+  '    KKKKWWWWWWWWWWKKKK    ',
+  '   KKKKKWWWWWWWWWWKKKKK   ',
+  '   KKKKKWWWWWWWWWWKKKKK   ',
+  '   KKKKKWWWWWWWWWWKKKKK   ',
+  '    KKKKWWWWWWWWWWKKKK    ',
+  '    KYYYWWWWWWWWWWYYYK    ',
+  '   YYYYYYWWWWWWWWYYYYYY   ',
+  '  YYYYYYYYKKKKKKYYYYYYYY  ',
+  '   YYYYYY        YYYYYY   ',
 ];
-function tux(x,y,size,lineHeight) {
+function tux(x,y,size) {
+  const cell=size*.6;
+  const colors={K:'#78889a',W:palettes.dark.text,Y:palettes.dark.amber,P:palettes.dark.bg};
   const rows=tuxRows.map((line,i)=>{
-    let content=xml(line);
-    if(i===1||i===2) {
-      content=xml(line.slice(0,4))+`<tspan class="${i===1?'cyan':'amber'}">${xml(line.slice(4,7))}</tspan>`+xml(line.slice(7));
-    }
-    return `<text x="${x}" y="${y+i*lineHeight}" font-size="${size}" class="${i>=5?'amber':'text'}">${content}</text>`;
+    return [...line.matchAll(/K+|W+|Y+|P+/g)].map(match=>{
+      const run=match[0],column=match.index;
+      return `<text x="${(x+column*cell).toFixed(2)}" y="${(y+i*size).toFixed(2)}" font-size="${size}" textLength="${(run.length*cell).toFixed(2)}" lengthAdjust="spacingAndGlyphs" fill="${colors[run[0]]}">${'█'.repeat(run.length)}</text>`;
+    }).join('');
   }).join('');
-  return `<g aria-hidden="true" xml:space="preserve" style="font-variant-ligatures:none">${rows}</g>`;
+  return `<g aria-hidden="true" style="font-variant-ligatures:none">${rows}</g>`;
 }
 function ansiStrip(x,y,cell=18) {
   return ['#30363d','#d88c9a','#8bd49c','#e5c07b','#91b9ed','#b6a2de','#83d6e8','#e6edf3'].map((fill,i)=>`<rect x="${x+i*cell}" y="${y}" width="${cell}" height="7" fill="${fill}"/>`).join('');
@@ -86,10 +99,10 @@ const aboutFields=[
 ];
 function about(compact) {
   const w=compact?360:900;
-  const description='Linux terminal profile with a character-art Tux penguin. '+aboutFields.map(([key,val])=>`${key}: ${val}`).join('. ');
+  const description='Linux terminal profile with an ANSI block-character Tux penguin. '+aboutFields.map(([key,val])=>`${key}: ${val}`).join('. ');
   let b=aboutPrompt(67,compact,'whoami');
   if(compact) {
-    b+=tux(39,113,17,18.5);
+    b+=tux(20,101,8.5);
     b+=txt(174,125,'Ramazan',19,'text','font-weight="700"')+txt(174,150,'Yıldırım',19,'text','font-weight="700"');
     b+=txt(174,176,'ramazan@linux',11,'cyan')+txt(174,196,'~/profile',11,'muted');
     b+=ansiStrip(174,218,18);
@@ -103,7 +116,7 @@ function about(compact) {
     b+=`<path d="M24 ${y-3}h312" class="rule"/>`+aboutPrompt(y+22,true)+cursor(146,y+22);
     return terminal('~/profile — bash',w,y+43,b,'dark',description);
   }
-  b+=tux(61,145,26,28);
+  b+=tux(40,111,14);
   b+=txt(149,369,'[ linux / tux ]',11,'muted','text-anchor="middle"');
   b+=`<path d="M287 102v253" class="rule"/>`;
   b+=txt(318,126,'Ramazan Yıldırım',23,'text','font-weight="700"');
