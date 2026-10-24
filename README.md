@@ -86,7 +86,7 @@
 <p align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="assets/terminal/about-compact.svg">
-    <img src="assets/terminal/about.svg" alt="Linux terminal profile with ANSI block-character Tux. Education: Computer Engineering | Final Year. University: Burdur Mehmet Akif Ersoy University. Role: Co-Founder &amp; Developer | Dijital Diş Dünyası. Focus: Deep Learning / Computer Vision / Turkish NLP. Exploring: LLM Fine-Tuning / VLMs / AI Agents. Mindset: Turning ideas into real-world solutions." width="900">
+    <img src="assets/terminal/about.svg" alt="Animated Linux terminal profile: whoami types, then ANSI Tux and profile appear; Tux waves twice every 14 seconds. Education: Computer Engineering | Final Year. University: Burdur Mehmet Akif Ersoy University. Role: Co-Founder &amp; Developer | Dijital Diş Dünyası. Focus: Deep Learning / Computer Vision / Turkish NLP. Exploring: LLM Fine-Tuning / VLMs / AI Agents. Mindset: Turning ideas into real-world solutions." width="900">
   </picture>
 </p>
 

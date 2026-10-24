@@ -26,7 +26,7 @@ ${body}</svg>\n`;
 }
 // Original 88 x 58 luminance sample of the user's RY mark. Preserve this silhouette.
 const logoRows=JSON.parse(await readFile(new URL('./ry-grid.json',import.meta.url),'utf8'));
-const cursor=(x,y)=>`<rect x="${x}" y="${y-12}" width="8" height="15" class="green"/>`;
+const cursor=(x,y)=>`<rect x="${x}" y="${y-12}" width="8" height="15" class="green terminal-cursor"/>`;
 const headerPalettes = {
   dark: {text:'#e6edf3',muted:'#9ba8b7'},
   light: {text:'#24292f',muted:'#57606a'},
@@ -74,13 +74,40 @@ const tuxRows=[
 function tux(x,y,size) {
   const cell=size*.6;
   const colors={K:'#78889a',W:palettes.dark.text,Y:palettes.dark.amber,P:palettes.dark.bg};
-  const rows=tuxRows.map((line,i)=>{
+  function renderRow(line,i) {
     return [...line.matchAll(/K+|W+|Y+|P+/g)].map(match=>{
       const run=match[0],column=match.index;
       return `<text x="${(x+column*cell).toFixed(2)}" y="${(y+i*size).toFixed(2)}" font-size="${size}" textLength="${(run.length*cell).toFixed(2)}" lengthAdjust="spacingAndGlyphs" fill="${colors[run[0]]}">${'█'.repeat(run.length)}</text>`;
     }).join('');
-  }).join('');
-  return `<g aria-hidden="true" style="font-variant-ligatures:none">${rows}</g>`;
+  }
+  // Keep the inner column attached to the body while the outer flipper waves.
+  const isWing=(character,column,row)=>character==='K'&&row>=8&&row<=13&&column<7;
+  const body=tuxRows.map((line,row)=>renderRow([...line].map((character,column)=>isWing(character,column,row)?' ':character).join(''),row)).join('');
+  const wing=tuxRows.map((line,row)=>renderRow([...line].map((character,column)=>isWing(character,column,row)?character:' ').join(''),row)).join('');
+  return `<g aria-hidden="true" style="font-variant-ligatures:none">${body}<g class="tux-wing" style="transform-origin:${(x+7.5*cell).toFixed(2)}px ${(y+7.5*size).toFixed(2)}px">${wing}</g></g>`;
+}
+const aboutMotion={typingStart:.35,letterInterval:.14,outputAt:1.35,footerAt:1.55,waveAt:14,wavePeriod:14};
+function aboutMotionStyles() {
+  const {typingStart,letterInterval,outputAt,footerAt,waveAt,wavePeriod}=aboutMotion;
+  const caretFrames=Array.from({length:6},(_,i)=>`${((typingStart+i*letterInterval)/outputAt*100).toFixed(3)}%{transform:translateX(calc(var(--cell) * ${i+1}));opacity:1}`).join('');
+  return `<style>
+.command-letter{animation:terminal-show .08s linear both;animation-delay:var(--letter-delay)}
+.typing-cursor{opacity:0;animation:terminal-typing ${outputAt}s steps(1,end) both}
+.profile-output{animation:terminal-show .16s ease-out ${outputAt}s both}
+.profile-footer{animation:terminal-show .16s ease-out ${footerAt}s both}
+.terminal-cursor{animation:terminal-blink 1s steps(1,end) ${footerAt}s infinite}
+.tux-wing{transform-box:view-box;animation:tux-wave ${wavePeriod}s ease-in-out ${waveAt}s infinite}
+@keyframes terminal-show{from{opacity:0}to{opacity:1}}
+@keyframes terminal-typing{0%{transform:translateX(0);opacity:1}${caretFrames}100%{transform:translateX(calc(var(--cell) * 6));opacity:0}}
+@keyframes terminal-blink{0%,49.999%{opacity:1}50%,100%{opacity:0}}
+@keyframes tux-wave{0%,9%,100%{transform:rotate(0deg)}1.5%,7.5%{transform:rotate(108deg)}3%,6%{transform:rotate(80deg)}4.5%{transform:rotate(116deg)}}
+@media(prefers-reduced-motion:reduce){.command-letter,.typing-cursor,.profile-output,.profile-footer,.terminal-cursor,.tux-wing{animation:none}.typing-cursor{display:none}}
+</style>`;
+}
+function aboutIntro(compact) {
+  const size=compact?11:12,cell=size*.6,x=(compact?132:143)+2*cell;
+  const letters=[...'whoami'].map((letter,i)=>`<tspan class="command-letter" x="${(x+i*cell).toFixed(2)}" style="--letter-delay:${(aboutMotion.typingStart+i*aboutMotion.letterInterval).toFixed(2)}s">${letter}</tspan>`).join('');
+  return aboutMotionStyles()+aboutPrompt(67,compact)+`<text y="67" class="text" font-size="${size}">${letters}</text><rect class="green typing-cursor" x="${x}" y="55" width="${cell}" height="15" style="--cell:${cell}px"/>`;
 }
 function ansiStrip(x,y,cell=18) {
   return ['#30363d','#d88c9a','#8bd49c','#e5c07b','#91b9ed','#b6a2de','#83d6e8','#e6edf3'].map((fill,i)=>`<rect x="${x+i*cell}" y="${y}" width="${cell}" height="7" fill="${fill}"/>`).join('');
@@ -99,8 +126,8 @@ const aboutFields=[
 ];
 function about(compact) {
   const w=compact?360:900;
-  const description='Linux terminal profile with an ANSI block-character Tux penguin. '+aboutFields.map(([key,val])=>`${key}: ${val}`).join('. ');
-  let b=aboutPrompt(67,compact,'whoami');
+  const description='Linux terminal profile: whoami types once, the ANSI Tux and profile appear, then Tux waves twice every 14 seconds beside a blinking shell cursor. '+aboutFields.map(([key,val])=>`${key}: ${val}`).join('. ');
+  let b=aboutIntro(compact)+'<g class="profile-output">';
   if(compact) {
     b+=tux(20,101,8.5);
     b+=txt(174,125,'Ramazan',19,'text','font-weight="700"')+txt(174,150,'Yıldırım',19,'text','font-weight="700"');
@@ -113,7 +140,7 @@ function about(compact) {
       lines.forEach((line,i)=>b+=txt(24,y+19+i*18,line,12));
       y+=45+(lines.length-1)*18;
     });
-    b+=`<path d="M24 ${y-3}h312" class="rule"/>`+aboutPrompt(y+22,true)+cursor(146,y+22);
+    b+=`</g><g class="profile-footer"><path d="M24 ${y-3}h312" class="rule"/>`+aboutPrompt(y+22,true)+cursor(146,y+22)+'</g>';
     return terminal('~/profile — bash',w,y+43,b,'dark',description);
   }
   b+=tux(40,111,14);
@@ -127,7 +154,7 @@ function about(compact) {
     b+=txt(318,y,`${key}:`,12,'green')+txt(432,y,val,13);
   });
   b+=ansiStrip(318,357);
-  b+=`<path d="M24 385h852" class="rule"/>`+aboutPrompt(412)+cursor(158,412);
+  b+=`</g><g class="profile-footer"><path d="M24 385h852" class="rule"/>`+aboutPrompt(412)+cursor(158,412)+'</g>';
   return terminal('~/profile — bash',w,436,b,'dark',description);
 }
 async function project(compact) {
