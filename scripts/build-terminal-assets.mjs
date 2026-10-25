@@ -86,10 +86,12 @@ function tux(x,y,size) {
   const wing=tuxRows.map((line,row)=>renderRow([...line].map((character,column)=>isWing(character,column,row)?character:' ').join(''),row)).join('');
   return `<g aria-hidden="true" style="font-variant-ligatures:none">${body}<g class="tux-wing" style="transform-origin:${(x+7.5*cell).toFixed(2)}px ${(y+7.5*size).toFixed(2)}px">${wing}</g></g>`;
 }
-const aboutMotion={typingStart:.35,letterInterval:.14,outputAt:1.35,footerAt:1.55,waveAt:14,wavePeriod:14};
+const aboutMotion={typingStart:.35,letterInterval:.14,outputAt:1.35,footerAt:1.55,waveAt:4,wavePeriod:4};
 function aboutMotionStyles() {
   const {typingStart,letterInterval,outputAt,footerAt,waveAt,wavePeriod}=aboutMotion;
   const caretFrames=Array.from({length:6},(_,i)=>`${((typingStart+i*letterInterval)/outputAt*100).toFixed(3)}%{transform:translateX(calc(var(--cell) * ${i+1}));opacity:1}`).join('');
+  // Keep the two-wave gesture at 1.26 seconds when its repeat interval changes.
+  const waveFrames=[[0,0],[.21,108],[.42,80],[.63,116],[.84,80],[1.05,108],[1.26,0]].map(([time,angle])=>`${(time/wavePeriod*100).toFixed(3)}%{transform:rotate(${angle}deg)}`).join('');
   return `<style>
 .command-letter{animation:terminal-show .08s linear both;animation-delay:var(--letter-delay)}
 .typing-cursor{opacity:0;animation:terminal-typing ${outputAt}s steps(1,end) both}
@@ -100,7 +102,7 @@ function aboutMotionStyles() {
 @keyframes terminal-show{from{opacity:0}to{opacity:1}}
 @keyframes terminal-typing{0%{transform:translateX(0);opacity:1}${caretFrames}100%{transform:translateX(calc(var(--cell) * 6));opacity:0}}
 @keyframes terminal-blink{0%,49.999%{opacity:1}50%,100%{opacity:0}}
-@keyframes tux-wave{0%,9%,100%{transform:rotate(0deg)}1.5%,7.5%{transform:rotate(108deg)}3%,6%{transform:rotate(80deg)}4.5%{transform:rotate(116deg)}}
+@keyframes tux-wave{${waveFrames}100%{transform:rotate(0deg)}}
 @media(prefers-reduced-motion:reduce){.command-letter,.typing-cursor,.profile-output,.profile-footer,.terminal-cursor,.tux-wing{animation:none}.typing-cursor{display:none}}
 </style>`;
 }
@@ -126,7 +128,7 @@ const aboutFields=[
 ];
 function about(compact) {
   const w=compact?360:900;
-  const description='Linux terminal profile: whoami types once, the ANSI Tux and profile appear, then Tux waves twice every 14 seconds beside a blinking shell cursor. '+aboutFields.map(([key,val])=>`${key}: ${val}`).join('. ');
+  const description=`Linux terminal profile: whoami types once, the ANSI Tux and profile appear, then Tux waves twice every ${aboutMotion.wavePeriod} seconds beside a blinking shell cursor. `+aboutFields.map(([key,val])=>`${key}: ${val}`).join('. ');
   let b=aboutIntro(compact)+'<g class="profile-output">';
   if(compact) {
     b+=tux(20,101,8.5);
@@ -159,18 +161,19 @@ function about(compact) {
 }
 async function project(compact) {
   const original=await readFile(path.join(root,'assets/dijital-dis-dunyasi/logo.svg'),'utf8');
-  const brand=original.slice(original.indexOf('<svg')).replace(/<svg\b[^>]*>/,tag=>tag.replace(/\s(?:x|y|width|height)="[^"]*"/g,'').replace('<svg ','<svg x="24" y="96" width="'+(compact?300:320)+'" height="86" ')).replaceAll('#0D6093','#83d6e8');
-  let b=txt(24,65,compact?'$ cat ~/projects/ddd.conf':'$ cat ~/projects/dijital-dis-dunyasi.conf',compact?12:14,'green')+brand;
+  const width=compact?360:900,logoWidth=compact?240:300;
+  const brand=original.slice(original.indexOf('<svg')).replace(/<svg\b[^>]*>/,tag=>tag.replace(/\s(?:x|y|width|height)="[^"]*"/g,'').replace('<svg ',`<svg x="${(width-logoWidth)/2}" y="62" width="${logoWidth}" height="${compact?64:80}" `)).replaceAll('#0D6093','#83d6e8');
+  const centered='text-anchor="middle"';
+  let b=brand;
+  b+=txt(width/2,compact?154:168,'Co-Founder & Developer',13,'green',centered);
   if(compact) {
-    b+=txt(24,218,'Co-Founder & Developer',15,'cyan','font-weight="700"')+txt(24,246,'A digital platform for the',12)+txt(24,265,'dental ecosystem.',12);
-    b+=txt(24,297,'clinics / labs / suppliers',11,'muted')+txt(24,316,'patients / professionals',11,'muted')+txt(24,350,'procurement / operations / AI',11,'green');
+    b+=txt(width/2,181,'A digital platform for the',12,'text',centered)+txt(width/2,199,'dental ecosystem.',12,'text',centered);
   } else {
-    b+=`<path d="M372 97v109" class="rule"/>`+txt(400,114,'Co-Founder & Developer',20,'cyan','font-weight="700"')+txt(400,146,'An integrated digital platform',14)+txt(400,169,'for the dental ecosystem.',14)+txt(400,201,'procurement / operations / communication / AI',11,'muted');
-    b+=`<path d="M24 232h852" class="rule"/>`+txt(24,260,'clinics / laboratories / suppliers / patients / professionals',13,'green');
+    b+=txt(width/2,198,'A digital platform for the dental ecosystem.',13,'text',centered);
   }
-  return terminal('ramazan@linux: ~/projects',compact?360:900,compact?376:284,b,'dark','Dijital Diş Dünyası. Co-Founder & Developer. An integrated digital platform connecting clinics, laboratories, suppliers, patients and professionals across procurement, operations, communication and AI-assisted workflows.');
+  return terminal('~/projects/dijital-dis-dunyasi',width,236,b,'dark','Dijital Diş Dünyası. Co-Founder & Developer. A digital platform for the dental ecosystem.');
 }
-const buttons={website:['website',126],cv:['download CV',140,'download'],portfolio:['download portfolio',194,'download'],linkedin:['linkedin',136],email:['email',108],'visit-platform':['dijitaldisdunyasi.com',220],'download-cv-en':['download CV --en',184,'download'],'download-cv-tr':['download CV --tr',184,'download'],'download-portfolio':['download portfolio',194,'download'],'cv-repository':['cv-repository',178]};
+const buttons={website:['website',126],cv:['download CV',140,'download'],'cv-en':['CV --en',112,'download'],'cv-tr':['CV --tr',112,'download'],portfolio:['download portfolio',194,'download'],linkedin:['linkedin',136],email:['email',108],'visit-platform':['dijitaldisdunyasi.com',220],'download-cv-en':['download CV --en',184,'download'],'download-cv-tr':['download CV --tr',184,'download'],'download-portfolio':['download portfolio',194,'download'],'cv-repository':['cv-repository',178]};
 await mkdir(path.join(root,'assets/terminal'),{recursive:true});
 for(const theme of ['dark','light']) for(const compact of [false,true]) await writeFile(path.join(root,`assets/brand/header-${theme}${compact?'-compact':''}.svg`),header(theme,compact));
 for(const compact of [false,true]) {

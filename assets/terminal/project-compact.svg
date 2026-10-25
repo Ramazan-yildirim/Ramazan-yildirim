@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="360" height="376" viewBox="0 0 360 376" role="img" aria-labelledby="title desc">
-<title id="title">ramazan@linux: ~/projects</title><desc id="desc">Dijital Diş Dünyası. Co-Founder &amp; Developer. An integrated digital platform connecting clinics, laboratories, suppliers, patients and professionals across procurement, operations, communication and AI-assisted workflows.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="236" viewBox="0 0 360 236" role="img" aria-labelledby="title desc">
+<title id="title">~/projects/dijital-dis-dunyasi</title><desc id="desc">Dijital Diş Dünyası. Co-Founder &amp; Developer. A digital platform for the dental ecosystem.</desc>
 <style>text{font-family:'DejaVu Sans Mono',Consolas,'Liberation Mono',monospace}.text{fill:#e6edf3}.muted{fill:#9ba8b7}.green{fill:#8bd49c}.cyan{fill:#83d6e8}.amber{fill:#e5c07b}.rule{stroke:#30363d}</style>
-<rect x=".5" y=".5" width="359" height="375" rx="6" fill="#0d1117" stroke="#30363d"/>
+<rect x=".5" y=".5" width="359" height="235" rx="6" fill="#0d1117" stroke="#30363d"/>
 <path d="M6 .5H354q5.5 0 5.5 6V35.5H.5V6q0-5.5 5.5-5.5" fill="#161b22"/>
 <path d="M1 35.5H359" class="rule"/>
 <path d="M17 15h8m-4-4v8M34 15h8M52 11l8 8m0-8-8 8" class="rule" fill="none"/>
-<text x="180" y="23" class="muted" font-size="10" text-anchor="middle">ramazan@linux: ~/projects</text>
-<text x="24" y="65" class="green" font-size="12" >$ cat ~/projects/ddd.conf</text><svg x="24" y="96" width="300" height="86" version="1.1" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+<text x="180" y="23" class="muted" font-size="10" text-anchor="middle">~/projects/dijital-dis-dunyasi</text>
+<svg x="60" y="62" width="240" height="64" version="1.1" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 viewBox="800 2050 3430 915" style="enable-background:new 821 2068 3389 902;" xml:space="preserve">
 <g>
 	<g>
@@ -422,4 +422,4 @@
 </g>
 </svg>
 
-<text x="24" y="218" class="cyan" font-size="15" font-weight="700">Co-Founder &amp; Developer</text><text x="24" y="246" class="text" font-size="12" >A digital platform for the</text><text x="24" y="265" class="text" font-size="12" >dental ecosystem.</text><text x="24" y="297" class="muted" font-size="11" >clinics / labs / suppliers</text><text x="24" y="316" class="muted" font-size="11" >patients / professionals</text><text x="24" y="350" class="green" font-size="11" >procurement / operations / AI</text></svg>
+<text x="180" y="154" class="green" font-size="13" text-anchor="middle">Co-Founder &amp; Developer</text><text x="180" y="181" class="text" font-size="12" text-anchor="middle">A digital platform for the</text><text x="180" y="199" class="text" font-size="12" text-anchor="middle">dental ecosystem.</text></svg>

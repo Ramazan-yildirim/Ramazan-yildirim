@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="194" viewBox="0 0 360 194" role="img" aria-labelledby="title desc">
+<title id="title">GitHub activity</title><desc id="desc">GitHub activity for Ramazan Yıldırım could not be loaded. No estimated statistics are shown.</desc>
+<style>text{font-family:'DejaVu Sans Mono',Consolas,'Liberation Mono',monospace;font-variant-numeric:tabular-nums}.text{fill:#e6edf3}.muted{fill:#9ba8b7}.accent{fill:#8bd49c}.cyan{fill:#83d6e8}.amber{fill:#e5c07b}.rule{stroke:#30363d}</style>
+<rect x=".5" y=".5" width="359" height="193" rx="10" fill="#0d1117" stroke="#30363d"/>
+<path d="M10 .5H350q9.5 0 9.5 10V33.5H.5V10q0-9.5 9.5-9.5" fill="#161b22"/>
+<path d="M1 33.5H359" class="rule"/>
+<path d="M17 15h8m-4-4v8M34 15h8M52 11l8 8m0-8-8 8" class="rule" fill="none"/>
+<text x="180" y="22" class="muted" font-size="10" font-weight="400" text-anchor="middle" >~/github / activity</text>
+<text x="24" y="65" class="accent" font-size="16" font-weight="600" text-anchor="start" >GitHub activity</text>
+
+<text x="180" y="120" class="amber" font-size="15" font-weight="600" text-anchor="middle" >Temporarily unavailable</text><text x="180" y="153" class="muted" font-size="11" font-weight="400" text-anchor="middle" >Please try again shortly.</text></svg>

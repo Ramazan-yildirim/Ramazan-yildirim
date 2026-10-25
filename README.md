@@ -11,7 +11,8 @@
 
 <p align="center">
   <a href="https://ramazanyildirim.vercel.app/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/website-light.svg"><img src="assets/ui/website.svg" alt="Personal website" height="36"></picture></a>
-  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-light.svg"><img src="assets/ui/cv.svg" alt="Download English CV PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_EN.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-en-light.svg"><img src="assets/ui/cv-en.svg" alt="Download English CV PDF" height="36"></picture></a>
+  <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/CV/output/Ramazan_Yildirim_CV_TR.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/cv-tr-light.svg"><img src="assets/ui/cv-tr.svg" alt="Download Turkish CV PDF" height="36"></picture></a>
   <a href="https://raw.githubusercontent.com/Ramazan-yildirim/CV_Portfolio/main/portfolio/output/Ramazan_Yildirim_Portfolyo.pdf"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/portfolio-light.svg"><img src="assets/ui/portfolio.svg" alt="Download portfolio PDF" height="36"></picture></a>
   <a href="https://www.linkedin.com/in/ramazanyldr/"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/linkedin-light.svg"><img src="assets/ui/linkedin.svg" alt="LinkedIn" height="36"></picture></a>
   <a href="mailto:ramazanyldr0103@gmail.com"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/email-light.svg"><img src="assets/ui/email.svg" alt="Email Ramazan" height="36"></picture></a>
@@ -86,25 +87,22 @@
 <p align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="assets/terminal/about-compact.svg">
-    <img src="assets/terminal/about.svg" alt="Animated Linux terminal profile: whoami types, then ANSI Tux and profile appear; Tux waves twice every 14 seconds. Education: Computer Engineering | Final Year. University: Burdur Mehmet Akif Ersoy University. Role: Co-Founder &amp; Developer | Dijital Diş Dünyası. Focus: Deep Learning / Computer Vision / Turkish NLP. Exploring: LLM Fine-Tuning / VLMs / AI Agents. Mindset: Turning ideas into real-world solutions." width="900">
+    <img src="assets/terminal/about.svg" alt="Animated Linux terminal profile: whoami types, then ANSI Tux and profile appear; Tux waves twice every 4 seconds. Education: Computer Engineering | Final Year. University: Burdur Mehmet Akif Ersoy University. Role: Co-Founder &amp; Developer | Dijital Diş Dünyası. Focus: Deep Learning / Computer Vision / Turkish NLP. Exploring: LLM Fine-Tuning / VLMs / AI Agents. Mindset: Turning ideas into real-world solutions." width="900">
   </picture>
 </p>
 
 ## `$ ls ~/projects/dijital-dis-dunyasi`
 
 <p align="center">
-  <a href="https://dijitaldisdunyasi.com">
-    <picture>
-      <source media="(max-width: 600px)" srcset="assets/terminal/project-compact.svg">
-      <img src="assets/terminal/project.svg" alt="Dijital Diş Dünyası — Co-Founder &amp; Developer. An integrated digital platform for clinics, laboratories, suppliers, patients and professionals. Procurement, operations, communication and AI-assisted workflows." width="900">
-    </picture>
-  </a>
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/terminal/project-compact.svg">
+    <img src="assets/terminal/project.svg" alt="Dijital Diş Dünyası — Co-Founder &amp; Developer. A digital platform for the dental ecosystem." width="900">
+  </picture>
 </p>
 
 <p align="center">
   <a href="https://dijitaldisdunyasi.com"><picture><source media="(prefers-color-scheme: light)" srcset="assets/ui/visit-platform-light.svg"><img src="assets/ui/visit-platform.svg" alt="Visit Dijital Diş Dünyası" height="36"></picture></a>
 </p>
-
 
 ## `$ ls ~/stack`
 
@@ -141,8 +139,6 @@
 
 <p align="center">
   <img src="assets/tech-cards/tensorflow.svg" alt="TensorFlow" width="108" height="86">
-  <img src="assets/tech-cards/csharp.svg" alt="C#" width="108" height="86">
-  <img src="assets/tech-cards/dotnet.svg" alt=".NET" width="108" height="86">
   <img src="assets/tech-cards/html5.svg" alt="HTML5" width="108" height="86">
   <img src="assets/tech-cards/css3.svg" alt="CSS3" width="108" height="86">
   <img src="assets/tech-cards/powershell.svg" alt="PowerShell" width="108" height="86">
@@ -160,7 +156,7 @@
     <source media="(max-width: 600px)" srcset="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2&amp;theme=light&amp;layout=compact">
     <source media="(prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2&amp;theme=dark">
     <source media="(prefers-color-scheme: light)" srcset="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2&amp;theme=light">
-    <img src="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2" alt="GitHub calendar contributions since 2023, current streak and public repository metrics" width="720">
+    <img src="https://ramazan-github-stats.vercel.app/api/stats?v=terminal-v2" alt="GitHub contributions since 2023 and this year, circular current-streak highlight, public repositories, stars and followers" width="720">
   </picture>
   </a>
 </p>
@@ -171,7 +167,7 @@
     <source media="(max-width: 600px)" srcset="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2&amp;theme=light&amp;layout=compact">
     <source media="(prefers-color-scheme: dark)" srcset="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2&amp;theme=dark">
     <source media="(prefers-color-scheme: light)" srcset="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2&amp;theme=light">
-    <img src="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2" alt="Language byte distribution across owned public repositories, excluding forks" width="720">
+    <img src="https://ramazan-github-stats.vercel.app/api/languages?v=terminal-v2" alt="Donut chart of language byte distribution across owned public repositories, excluding forks" width="720">
   </picture>
 </p>
 
