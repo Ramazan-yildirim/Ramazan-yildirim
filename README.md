@@ -111,6 +111,7 @@
 <p align="center">
   <img src="assets/tech-cards/python.svg" alt="Python" width="108" height="86">
   <img src="assets/tech-cards/pytorch.svg" alt="PyTorch" width="108" height="86">
+  <img src="assets/tech-cards/tensorflow.svg" alt="TensorFlow" width="108" height="86">
   <img src="assets/tech-cards/huggingface.svg" alt="Hugging Face" width="108" height="86">
   <img src="assets/tech-cards/opencv.svg" alt="OpenCV" width="108" height="86">
   <img src="assets/tech-cards/mediapipe.svg" alt="MediaPipe" width="108" height="86">
@@ -124,6 +125,8 @@
   <img src="assets/tech-cards/php.svg" alt="PHP" width="108" height="86">
   <img src="assets/tech-cards/vuejs.svg" alt="Vue.js" width="108" height="86">
   <img src="assets/tech-cards/javascript.svg" alt="JavaScript" width="108" height="86">
+  <img src="assets/tech-cards/html5.svg" alt="HTML5" width="108" height="86">
+  <img src="assets/tech-cards/css3.svg" alt="CSS3" width="108" height="86">
 </p>
 
 <p align="center"><code>~/stack/tools</code></p>
@@ -132,20 +135,9 @@
   <img src="assets/tech-cards/docker.svg" alt="Docker" width="108" height="86">
   <img src="assets/tech-cards/linux.svg" alt="Linux" width="108" height="86">
   <img src="assets/tech-cards/git.svg" alt="Git" width="108" height="86">
-</p>
-
-<details>
-<summary><code>ls ~/stack/other</code> — Other technologies</summary>
-
-<p align="center">
-  <img src="assets/tech-cards/tensorflow.svg" alt="TensorFlow" width="108" height="86">
-  <img src="assets/tech-cards/html5.svg" alt="HTML5" width="108" height="86">
-  <img src="assets/tech-cards/css3.svg" alt="CSS3" width="108" height="86">
   <img src="assets/tech-cards/powershell.svg" alt="PowerShell" width="108" height="86">
   <img src="assets/tech-cards/github.svg" alt="GitHub" width="108" height="86">
 </p>
-
-</details>
 
 ## `$ gh stats --user Ramazan-yildirim`
 

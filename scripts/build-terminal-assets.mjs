@@ -20,7 +20,7 @@ function terminal(title,width,height,body,theme='dark',description=title) {
 <rect x=".5" y=".5" width="${width-1}" height="${height-1}" rx="6" fill="${p.bg}" stroke="${p.line}"/>
 <path d="M6 .5H${width-6}q5.5 0 5.5 6V35.5H.5V6q0-5.5 5.5-5.5" fill="${p.bar}"/>
 <path d="M1 35.5H${width-1}" class="rule"/>
-<path d="M17 15h8m-4-4v8M34 15h8M52 11l8 8m0-8-8 8" class="rule" fill="none"/>
+<g aria-hidden="true"><circle cx="20" cy="18" r="5.5" fill="#ff5f57"/><circle cx="38" cy="18" r="5.5" fill="#febc2e"/><circle cx="56" cy="18" r="5.5" fill="#28c840"/></g>
 ${txt(width/2,23,title,width===360?10:12,'muted','text-anchor="middle"')}
 ${body}</svg>\n`;
 }

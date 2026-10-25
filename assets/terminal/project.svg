@@ -4,7 +4,7 @@
 <rect x=".5" y=".5" width="899" height="235" rx="6" fill="#0d1117" stroke="#30363d"/>
 <path d="M6 .5H894q5.5 0 5.5 6V35.5H.5V6q0-5.5 5.5-5.5" fill="#161b22"/>
 <path d="M1 35.5H899" class="rule"/>
-<path d="M17 15h8m-4-4v8M34 15h8M52 11l8 8m0-8-8 8" class="rule" fill="none"/>
+<g aria-hidden="true"><circle cx="20" cy="18" r="5.5" fill="#ff5f57"/><circle cx="38" cy="18" r="5.5" fill="#febc2e"/><circle cx="56" cy="18" r="5.5" fill="#28c840"/></g>
 <text x="450" y="23" class="muted" font-size="12" text-anchor="middle">~/projects/dijital-dis-dunyasi</text>
 <svg x="300" y="62" width="300" height="80" version="1.1" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 viewBox="800 2050 3430 915" style="enable-background:new 821 2068 3389 902;" xml:space="preserve">
